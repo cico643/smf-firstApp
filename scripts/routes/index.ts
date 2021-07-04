@@ -2,11 +2,10 @@ import buildExtender from "sf-extension-utils/lib/router/buildExtender";
 import {
     NativeRouter as Router,
     NativeStackRouter as StackRouter,
-    Route
+    Route,
 } from "@smartface/router";
 import * as Pages from 'pages';
 import "sf-extension-utils/lib/router/goBack"; // Implements onBackButtonPressed
-
 const router = Router.of({
     path: "/",
     isRoot: true,
@@ -28,6 +27,13 @@ const router = Router.of({
                         headerBarStyle: { visible: true } 
                     })
                 }),
+                Route.of({
+                    path: "/pages/pageForgotPassword",
+                    build: buildExtender({
+                        getPageClass: () => Pages.PageForgotPassword,
+                        headerBarStyle: { visible: true }
+                    })
+                })
             ]
         })
     ]

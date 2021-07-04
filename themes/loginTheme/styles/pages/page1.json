@@ -1,0 +1,19 @@
+{
+    "#page1": {
+        "&-lblLoginText": {
+            "textColor": "#000000",
+            "font": {
+                "size": 35
+            }
+        },
+        "&-lblForgotPassword": {
+            "textColor": "#000000",
+            "font": {
+                "size": 12
+            }
+        },
+        "&-btnLogin": {
+            "backgroundColor": "#000000"
+        }
+    }
+}

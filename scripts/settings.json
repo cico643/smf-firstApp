@@ -1,11 +1,12 @@
 {
 	"config": {
 		"theme": {
-			"currentTheme": "baseTheme",
+			"currentTheme": "loginTheme",
 			"baseTheme": "baseTheme",
 			"themes": [
 				"defaultTheme",
-				"baseTheme"
+				"baseTheme",
+				"loginTheme"
 			]
 		},
 		"paths": {
