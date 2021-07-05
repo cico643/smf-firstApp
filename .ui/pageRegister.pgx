@@ -178,6 +178,15 @@
 				"alpha": 0.74,
 				"backgroundColor": "rgba( 245, 166, 35, 1 )",
 				"borderRadius": 20,
+				"flexProps": {
+					"alignSelf": "AUTO"
+				},
+				"ios": {
+					"shadowOpacity": 0.5,
+					"shadowOffset": {
+						"y": 3
+					}
+				},
 				"testId": "5WN8nwqDb",
 				"text": "Sign up",
 				"usePageVariable": true

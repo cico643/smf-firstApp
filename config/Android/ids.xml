@@ -11,14 +11,20 @@
     <item name="___library___Simple_listviewitem_LblChevron" type="id" />
     <item name="___library___Simple_gridviewItem_LblSubtitle" type="id" />
     <item name="___library___Simple_listviewitem_FlLine" type="id" />
-    <item name="_Page2_Lbl" type="id" />
-    <item name="_Page2_BtnSayHello" type="id" />
+    <item name="_Page1_LblSignUp" type="id" />
     <item name="_Page1_LblLoginText" type="id" />
     <item name="_Page1_MtbUsername" type="id" />
     <item name="_Page1_MtbPassword" type="id" />
     <item name="_Page1_LblForgotPassword" type="id" />
     <item name="_Page1_BtnLogin" type="id" />
     <item name="_Page1_LoginActivityIndicator" type="id" />
+    <item name="_Page2_Lbl" type="id" />
+    <item name="_Page2_BtnSayHello" type="id" />
     <item name="_PageForgotPassword_MtbEmail" type="id" />
     <item name="_PageForgotPassword_BtnSendMail" type="id" />
+    <item name="_PageRegister_BtnCancel" type="id" />
+    <item name="_PageRegister_LblHeader" type="id" />
+    <item name="_PageRegister_MtbUsername" type="id" />
+    <item name="_PageRegister_MtbPassword" type="id" />
+    <item name="_PageRegister_BtnRegister" type="id" />
 </resources>
