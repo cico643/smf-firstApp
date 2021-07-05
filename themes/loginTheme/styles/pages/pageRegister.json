@@ -1,0 +1,15 @@
+{
+    "#pageRegister": {
+        "&-btnCancel": {
+            "textColor": "#000000",
+            "font": {
+                "size": 35,
+                "style": "far fa-window-close"
+            },
+            "border": {
+                "style": "none"
+            }
+            
+        }
+    }
+}

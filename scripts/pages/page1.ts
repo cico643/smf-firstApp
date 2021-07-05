@@ -24,6 +24,10 @@ export default class Page1 extends Page1Design {
         this.lblForgotPassword.onTouch = () => {
             this.router.push("/pages/pageForgotPassword", { message: "Did you forget your password?"});
         }
+
+        this.lblSignUp.onTouch = () => {
+            this.router.push("/pages/pageRegister", { message: "You are about to sign up.."});
+        }
     }
 
 
@@ -49,7 +53,6 @@ export default class Page1 extends Page1Design {
 
 
     autoLogin = async () => {
-        console.log("asd");
         if(this.isSaved) {
             try {
                 await this.mySecureData.read();
@@ -57,9 +60,6 @@ export default class Page1 extends Page1Design {
             } catch (err) {
                 console.error(err);
             }
-        }
-        else {
-            alert("There is no data to read!");
         }
 
     }
@@ -83,6 +83,7 @@ function onShow(superOnShow: () => void) {
   superOnShow();
   this.headerBar.titleLayout.applyLayout();
   this.autoLogin();
+  this.mtbUsername.materialTextBox.text = userService.getUsername();
 }
 
 /**
