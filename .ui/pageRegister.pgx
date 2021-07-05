@@ -1,0 +1,187 @@
+{
+	"components": [
+		{
+			"className": ".sf-page",
+			"id": "1646-fc06-0ab1-08fd",
+			"initialized": true,
+			"props": {
+				"children": [
+					"8e46-a827-aff7-b94f",
+					"0bf5-b246-c5a4-e97c",
+					"a9e9-2e4e-d738-ef02",
+					"2ac6-efff-2890-5ed7",
+					"644b-7cf0-d052-bc81",
+					"064a-c0d9-18e3-bffe",
+					"be8a-c715-af79-66ba"
+				],
+				"name": "pageRegister",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-statusBar",
+			"id": "8e46-a827-aff7-b94f",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "1646-fc06-0ab1-08fd"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "0bf5-b246-c5a4-e97c",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "1646-fc06-0ab1-08fd",
+				"title": "pageRegister"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "pageRegister"
+			}
+		},
+		{
+			"className": ".sf-button #pageRegister-btnCancel",
+			"id": "a9e9-2e4e-d738-ef02",
+			"props": {
+				"children": [],
+				"name": "btnCancel",
+				"parent": "1646-fc06-0ab1-08fd",
+				"text": "",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"backgroundColor": "rgba( 255, 255, 255, 0 )",
+				"borderRadius": 0,
+				"borderWidth": 0,
+				"font": {
+					"size": 24,
+					"bold": false,
+					"italic": false,
+					"family": "FontAwesome5FreeRegular",
+					"style": null
+				},
+				"ios": {
+					"shadowColor": "rgba( 0, 0, 0, 1 )"
+				},
+				"testId": "3lOraTcC1",
+				"text": "",
+				"textAlignment": "MIDLEFT",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #page1-lblForgotPassword",
+			"id": "2ac6-efff-2890-5ed7",
+			"props": {
+				"children": [],
+				"name": "lblHeader",
+				"parent": "1646-fc06-0ab1-08fd",
+				"text": "Create new account",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"font": {
+					"size": 14,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"testId": "0WZ5vV77Yn",
+				"text": "Create new account",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".flexLayout .materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "644b-7cf0-d052-bc81",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtbUsername",
+				"parent": "1646-fc06-0ab1-08fd",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "materialTextBox",
+				"id": "574a-10da-b765-48e5"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"testId": "tXu-04WDX",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".flexLayout .materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "064a-c0d9-18e3-bffe",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtbPassword",
+				"parent": "1646-fc06-0ab1-08fd",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "materialTextBox",
+				"id": "574a-10da-b765-48e5"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"testId": "hQfCyJyyi",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button",
+			"id": "be8a-c715-af79-66ba",
+			"props": {
+				"children": [],
+				"name": "btnRegister",
+				"parent": "1646-fc06-0ab1-08fd",
+				"text": "Sign up",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"alpha": 0.74,
+				"backgroundColor": "rgba( 245, 166, 35, 1 )",
+				"borderRadius": 20,
+				"testId": "5WN8nwqDb",
+				"text": "Sign up",
+				"usePageVariable": true
+			}
+		}
+	]
+}

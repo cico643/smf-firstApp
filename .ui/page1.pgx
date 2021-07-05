@@ -8,29 +8,35 @@
 				"children": [
 					"42b807d1",
 					"b7d28cff",
-					"980522a9",
-					"9e49-7873-afba-472b"
+					"0316-a31b-3159-9cb9",
+					"fa28-0055-3f2a-42ee",
+					"d374-f3c0-7ceb-b619",
+					"073f-b673-11c0-ac2f",
+					"e41f-4bc0-bca2-77be",
+					"37b0-56a3-0703-50e7",
+					"91c2-bbce-197a-dd43"
 				],
 				"isRemovable": true,
 				"name": "page1",
 				"orientation": "PORTRAIT",
 				"parent": null,
-				"safeAreaEnabled": true
+				"safeAreaEnabled": true,
+				"text": "<i class=\"far fa-window-close\"></i>"
 			},
 			"type": "Page",
 			"userProps": {
 				"flexProps": {
-					"justifyContent": "SPACE_BETWEEN",
+					"justifyContent": "FLEX_START",
 					"alignItems": "STRETCH"
 				},
 				"orientation": "PORTRAIT",
 				"paddingBottom": 20,
 				"paddingLeft": 16,
 				"paddingRight": 16,
-				"safeAreaEnabled": true
+				"safeAreaEnabled": true,
+				"text": "<i class=\"far fa-window-close\"></i>"
 			},
-			"version": "6.15.1",
-			"degree": 0
+			"version": "6.15.1"
 		},
 		{
 			"className": ".sf-statusBar",
@@ -44,8 +50,7 @@
 			"type": "StatusBar",
 			"userProps": {
 				"visible": true
-			},
-			"degree": 1
+			}
 		},
 		{
 			"className": ".sf-headerBar",
@@ -61,71 +66,167 @@
 			"userProps": {
 				"title": "Page1",
 				"visible": true
-			},
-			"degree": 1
+			}
 		},
 		{
-			"className": ".sf-label",
-			"id": "980522a9",
+			"className": ".sf-label #page1-lblForgotPassword",
+			"id": "0316-a31b-3159-9cb9",
 			"props": {
-				"autoHeight": 39.325842696629216,
 				"children": [],
-				"name": "lbl",
+				"name": "lblSignUp",
 				"parent": "e891b86d",
-				"text": "Page1",
+				"text": "Sign Up",
 				"usePageVariable": true
 			},
 			"type": "Label",
 			"userProps": {
-				"autoHeight": 39.325842696629216,
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
 				"flexProps": {
-					"marginLeft": 20,
-					"marginRight": 20,
-					"alignSelf": "STRETCH",
-					"flexGrow": 1
+					"alignSelf": "AUTO"
 				},
-				"font": {
-					"size": 32,
-					"bold": false,
-					"italic": false,
-					"family": "SFProText",
-					"style": "Regular"
-				},
-				"height": 600,
-				"multiline": true,
-				"text": "Page1",
-				"textAlignment": "MIDCENTER",
-				"textColor": "rgba( 210, 210, 210, 1 )",
-				"usePageVariable": true,
-				"testId": "L-42gAben"
-			},
-			"degree": 1
+				"testId": "6CF1Bqgz9",
+				"text": "Sign Up",
+				"textAlignment": "MIDRIGHT",
+				"usePageVariable": true
+			}
 		},
 		{
-			"className": ".sf-button",
-			"id": "9e49-7873-afba-472b",
+			"className": ".sf-label #page1-lblLoginText",
+			"id": "fa28-0055-3f2a-42ee",
 			"props": {
-				"autoHeight": 50.561797752808985,
 				"children": [],
-				"name": "btnNext",
+				"name": "lblLoginText",
 				"parent": "e891b86d",
-				"text": "Next Page",
+				"text": "Login",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"testId": "m8WZwrKoz",
+				"text": "Login",
+				"textAlignment": "MIDCENTER",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".flexLayout .materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "d374-f3c0-7ceb-b619",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtbUsername",
+				"parent": "e891b86d",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "materialTextBox",
+				"id": "574a-10da-b765-48e5"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"height": null,
+				"left": 0,
+				"testId": "fR7RsfAYT",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".flexLayout .materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "073f-b673-11c0-ac2f",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtbPassword",
+				"parent": "e891b86d",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "materialTextBox",
+				"id": "574a-10da-b765-48e5"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"height": null,
+				"left": 0,
+				"marginTop": 5,
+				"testId": "GQ-V2CEOY",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #page1-lblForgotPassword",
+			"id": "e41f-4bc0-bca2-77be",
+			"props": {
+				"children": [],
+				"name": "lblForgotPassword",
+				"parent": "e891b86d",
+				"text": "Forgot password?",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"testId": "zHGjSobf9",
+				"text": "Forgot password?",
+				"textAlignment": "MIDRIGHT",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": " .sf-button #page1-btnLogin",
+			"id": "37b0-56a3-0703-50e7",
+			"props": {
+				"children": [],
+				"name": "btnLogin",
+				"parent": "e891b86d",
+				"text": "LOGIN",
 				"usePageVariable": true
 			},
 			"type": "Button",
 			"userProps": {
-				"autoHeight": 50.561797752808985,
 				"flexProps": {
-					"alignSelf": "AUTO",
-					"positionType": "RELATIVE"
+					"flexGrow": 0
 				},
-				"text": "Next Page",
-				"usePageVariable": true,
-				"width": null,
-				"testId": "ucEDBF6ZMB"
+				"testId": "DFm-THSNN",
+				"text": "LOGIN",
+				"textAlignment": "MIDCENTER",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-activityIndicator",
+			"id": "91c2-bbce-197a-dd43",
+			"props": {
+				"children": [],
+				"name": "loginActivityIndicator",
+				"parent": "e891b86d",
+				"usePageVariable": true
 			},
-			"degree": 1
+			"type": "ActivityIndicator",
+			"userProps": {
+				"flexProps": {
+					"alignSelf": "CENTER"
+				},
+				"testId": "mcigQEPIs",
+				"usePageVariable": true,
+				"visible": false
+			}
 		}
 	]
 }
