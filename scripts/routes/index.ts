@@ -1,12 +1,12 @@
-import buildExtender from "sf-extension-utils/lib/router/buildExtender";
+import buildExtender from "@smartface/extension-utils/lib/router/buildExtender";
 import {
     NativeRouter as Router,
     NativeStackRouter as StackRouter,
     Route,
 } from "@smartface/router";
 import * as Pages from 'pages';
-import "sf-extension-utils/lib/router/goBack"; // Implements onBackButtonPressed
-import System from "sf-core/device/system";
+import "@smartface/extension-utils/lib/router/goBack"; // Implements onBackButtonPressed
+import System from "@smartface/native/device/system";
 
 const androidModalDismiss = (router, route) => {
     const { view, action } = route.getState();
