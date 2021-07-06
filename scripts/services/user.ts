@@ -1,6 +1,15 @@
-import { sc } from "./serviceConfig";
-
+import ServiceCall from "@smartface/extension-utils/lib/service-call";
 let userName = "";
+
+
+const sc = new ServiceCall({
+    baseUrl: "https://halitaksoy.com",
+    logEnabled: true,
+    headers: {
+        apiVersion: "1.0"
+    }
+});
+
 
 export async function login( username: string, password: string): Promise<string>  {
             try {

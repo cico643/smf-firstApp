@@ -41,7 +41,7 @@ export default class Page1 extends Page1Design {
                this.isSaved = true;
                
                hideIndicator();
-               this.router.push("/pages/page2", { message: "Hello World!" });
+               this.router.push("/pages/pageHome", { message: "Hello World!" });
             } catch (err) {
                 hideIndicator();
                 alert("Invalid credentials");
@@ -56,7 +56,7 @@ export default class Page1 extends Page1Design {
         if(this.isSaved) {
             try {
                 await this.mySecureData.read();
-                this.router.push("/pages/page2", { message: "Hello World!" });
+                this.router.push("/pages/pageHome", { message: "Hello World!" });
             } catch (err) {
                 console.error(err);
             }

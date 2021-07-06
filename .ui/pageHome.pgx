@@ -1,0 +1,80 @@
+{
+	"components": [
+		{
+			"className": ".sf-page",
+			"id": "ecfb-1ecd-7f59-90c4",
+			"initialized": true,
+			"props": {
+				"children": [
+					"0733-af3f-98fc-2dc6",
+					"0e6c-7009-e20a-94c9",
+					"abdb-52a9-78ef-3e14"
+				],
+				"name": "pageHome",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {},
+			"version": "0.0.1.a"
+		},
+		{
+			"className": ".sf-statusBar",
+			"id": "0733-af3f-98fc-2dc6",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "ecfb-1ecd-7f59-90c4"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "0e6c-7009-e20a-94c9",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "ecfb-1ecd-7f59-90c4",
+				"title": "pageHome"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "pageHome"
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"hiddenComponent": false,
+			"id": "abdb-52a9-78ef-3e14",
+			"props": {
+				"children": [],
+				"name": "flexLayout1",
+				"parent": "ecfb-1ecd-7f59-90c4",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flexLayout1",
+				"id": "8eb9-e12b-1c29-1400"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"height": 361.40350877192986,
+				"left": 0,
+				"testId": "4zGjdnJ-s",
+				"top": 0,
+				"usePageVariable": true,
+				"width": 342.10526315789474
+			}
+		}
+	]
+}
