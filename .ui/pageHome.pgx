@@ -8,7 +8,7 @@
 				"children": [
 					"0733-af3f-98fc-2dc6",
 					"0e6c-7009-e20a-94c9",
-					"abdb-52a9-78ef-3e14"
+					"d321-b2cb-aa38-482a"
 				],
 				"name": "pageHome",
 				"orientation": "PORTRAIT",
@@ -28,7 +28,11 @@
 				"parent": "ecfb-1ecd-7f59-90c4"
 			},
 			"type": "StatusBar",
-			"userProps": {}
+			"userProps": {
+				"android": {
+					"color": "rgba( 245, 166, 35, 1 )"
+				}
+			}
 		},
 		{
 			"className": ".sf-headerBar",
@@ -42,38 +46,62 @@
 			},
 			"type": "HeaderBar",
 			"userProps": {
+				"backgroundColor": "rgba( 245, 166, 35, 1 )",
 				"title": "pageHome"
 			}
 		},
 		{
-			"className": ".sf-flexLayout",
-			"hiddenComponent": false,
-			"id": "abdb-52a9-78ef-3e14",
+			"className": ".sf-listView",
+			"id": "d321-b2cb-aa38-482a",
 			"props": {
-				"children": [],
-				"name": "flexLayout1",
+				"children": [
+					"925f-f649-2861-2144"
+				],
+				"name": "listView1",
 				"parent": "ecfb-1ecd-7f59-90c4",
 				"usePageVariable": true
 			},
+			"type": "ListView",
+			"userProps": {
+				"testId": "kGai0QW_j",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-listViewItem",
+			"hiddenComponent": false,
+			"id": "925f-f649-2861-2144",
+			"props": {
+				"children": [],
+				"name": "lviColor",
+				"parent": "d321-b2cb-aa38-482a"
+			},
 			"source": {
 				"page": "__library__",
-				"type": "flexLayout1",
-				"id": "8eb9-e12b-1c29-1400"
+				"type": "lviColor",
+				"id": "b317-479f-0ccc-51c7"
 			},
-			"type": "FlexLayout",
+			"type": "ListViewItem",
 			"userProps": {
 				"flex": {
+					"flexDirection": 2,
+					"alignItems": 2,
+					"justifyContent": 3,
+					"alignContent": 4,
+					"alignSelf": 4,
 					"positionType": 0
 				},
 				"flexProps": {
+					"flexDirection": "ROW",
+					"alignItems": "CENTER",
+					"justifyContent": "SPACE_BETWEEN",
+					"alignContent": "STRETCH",
+					"alignSelf": "STRETCH",
 					"positionType": "RELATIVE"
 				},
-				"height": 361.40350877192986,
 				"left": 0,
-				"testId": "4zGjdnJ-s",
-				"top": 0,
-				"usePageVariable": true,
-				"width": 342.10526315789474
+				"testId": "08lCNCLltX",
+				"top": 0
 			}
 		}
 	]

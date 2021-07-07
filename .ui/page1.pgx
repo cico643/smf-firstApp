@@ -8,7 +8,6 @@
 				"children": [
 					"42b807d1",
 					"b7d28cff",
-					"0316-a31b-3159-9cb9",
 					"fa28-0055-3f2a-42ee",
 					"d374-f3c0-7ceb-b619",
 					"073f-b673-11c0-ac2f",
@@ -33,6 +32,7 @@
 				"paddingBottom": 20,
 				"paddingLeft": 16,
 				"paddingRight": 16,
+				"paddingTop": 48,
 				"safeAreaEnabled": true,
 				"text": "<i class=\"far fa-window-close\"></i>"
 			},
@@ -49,6 +49,9 @@
 			},
 			"type": "StatusBar",
 			"userProps": {
+				"android": {
+					"color": "rgba( 245, 166, 35, 1 )"
+				},
 				"visible": true
 			}
 		},
@@ -64,29 +67,9 @@
 			},
 			"type": "HeaderBar",
 			"userProps": {
+				"backgroundColor": "rgba( 245, 166, 35, 1 )",
 				"title": "Page1",
 				"visible": true
-			}
-		},
-		{
-			"className": ".sf-label #page1-lblForgotPassword",
-			"id": "0316-a31b-3159-9cb9",
-			"props": {
-				"children": [],
-				"name": "lblSignUp",
-				"parent": "e891b86d",
-				"text": "Sign Up",
-				"usePageVariable": true
-			},
-			"type": "Label",
-			"userProps": {
-				"flexProps": {
-					"alignSelf": "AUTO"
-				},
-				"testId": "6CF1Bqgz9",
-				"text": "Sign Up",
-				"textAlignment": "MIDRIGHT",
-				"usePageVariable": true
 			}
 		},
 		{
@@ -101,6 +84,10 @@
 			},
 			"type": "Label",
 			"userProps": {
+				"flexProps": {
+					"flexGrow": 0
+				},
+				"marginBottom": 8,
 				"testId": "m8WZwrKoz",
 				"text": "Login",
 				"textAlignment": "MIDCENTER",
@@ -200,8 +187,18 @@
 			},
 			"type": "Button",
 			"userProps": {
+				"alpha": 0.74,
+				"backgroundColor": "rgba( 245, 166, 35, 1 )",
+				"borderRadius": 20,
 				"flexProps": {
 					"flexGrow": 0
+				},
+				"ios": {
+					"shadowRadius": 0,
+					"shadowOpacity": 0.75,
+					"shadowOffset": {
+						"y": 3
+					}
 				},
 				"testId": "DFm-THSNN",
 				"text": "LOGIN",

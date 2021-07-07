@@ -5,11 +5,15 @@ import System from "@smartface/native/device/system";
 import * as userService from "../services/user";
 import setupButtonActivity from "@smartface/extension-utils/lib/button-activity";
 import SecureData from "@smartface/native/global/securedata";
+import HeaderBarItem from '@smartface/native/ui/headerbaritem';
+import Color from '@smartface/native/ui/color';
+import * as jwtStore from "store/jwtStore";
 
 export default class Page1 extends Page1Design {
     router: any;
     isSaved: boolean = false;
     mySecureData: SecureData;
+    signUpItem: HeaderBarItem;
 
 	constructor () {
         super();
@@ -25,9 +29,6 @@ export default class Page1 extends Page1Design {
             this.router.push("/pages/pageForgotPassword", { message: "Did you forget your password?"});
         }
 
-        this.lblSignUp.onTouch = () => {
-            this.router.push("/pages/pageRegister", { message: "You are about to sign up.."});
-        }
     }
 
 
@@ -37,8 +38,8 @@ export default class Page1 extends Page1Design {
                const response = await userService.login(this.mtbUsername.materialTextBox.text, this.mtbPassword.materialTextBox.text);
                // await new Promise(r => setTimeout(r, 2000));
 
-               await this.mySecureData.save({value: JSON.stringify(response)});
-               this.isSaved = true;
+               jwtStore.setJwt('userToken', JSON.stringify(response));
+               jwtStore.setIsLoggedIn('userLogged', true);
                
                hideIndicator();
                this.router.push("/pages/pageHome", { message: "Hello World!" });
@@ -53,15 +54,16 @@ export default class Page1 extends Page1Design {
 
 
     autoLogin = async () => {
-        if(this.isSaved) {
+
+        if(jwtStore.getIsLoggedIn("userLogged")) {
             try {
-                await this.mySecureData.read();
-                this.router.push("/pages/pageHome", { message: "Hello World!" });
+                const token = jwtStore.getJwt("userToken");
+                this.router.push("/pages/pageHome", { message: token });
             } catch (err) {
                 console.error(err);
             }
         }
-
+        
     }
    
     initMaterialTextBoxes() {
@@ -94,13 +96,6 @@ function onLoad(superOnLoad: () => void) {
     superOnLoad();
     console.info('Onload page1');
 
-    //@ts-ignore
-    this.mySecureData = new SecureData({
-        ios: {
-            service: "com.myapp.serviceparameter"
-        },
-        key: "keyparamater"
-    });
 
     this.headerBar.leftItemEnabled = false;
     this.headerBar.titleLayout = new PageTitleLayout();
@@ -108,5 +103,15 @@ function onLoad(superOnLoad: () => void) {
     if (System.OS === "Android") {
         this.headerBar.title = "";
     };
+
+    this.headerBar.backgroundColor = Color.create("#F5A623");
+    this.signUpItem = new HeaderBarItem({
+        title: 'SIGN UP',
+        onPress: () => {
+            this.router.push("/pages/auth/pageRegister", { message: "You are about to sign up.."});
+        }
+    });
+
+    this.headerBar.setItems([this.signUpItem]);
     this.initMaterialTextBoxes();
 }

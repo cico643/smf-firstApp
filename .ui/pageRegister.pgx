@@ -31,7 +31,11 @@
 				"parent": "1646-fc06-0ab1-08fd"
 			},
 			"type": "StatusBar",
-			"userProps": {}
+			"userProps": {
+				"android": {
+					"color": "rgba( 245, 166, 35, 1 )"
+				}
+			}
 		},
 		{
 			"className": ".sf-headerBar",
@@ -45,6 +49,7 @@
 			},
 			"type": "HeaderBar",
 			"userProps": {
+				"backgroundColor": "rgba( 245, 166, 35, 1 )",
 				"title": "pageRegister"
 			}
 		},
@@ -182,7 +187,7 @@
 					"alignSelf": "AUTO"
 				},
 				"ios": {
-					"shadowOpacity": 0.5,
+					"shadowOpacity": 0.75,
 					"shadowOffset": {
 						"y": 3
 					}

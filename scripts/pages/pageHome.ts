@@ -1,8 +1,6 @@
 import PageHomeDesign from 'generated/pages/pageHome';
 import { colorData, getColorData } from "services/colorDataApi";
 import LviColor from "components/LviColor";
-import FlexLayout1 from "components/FlexLayout1";
-import Color from "@smartface/native/ui/color";
 
 export default class PageHome extends PageHomeDesign {
     private data: colorData[] = [];
@@ -18,23 +16,22 @@ export default class PageHome extends PageHomeDesign {
     
     initListView() {
 
-            this.flexLayout1.listView1.rowHeight = 50;
-            this.flexLayout1.listView1.onRowBind = (listViewItem: LviColor, index: number) => {
-                listViewItem.lblName.text = this.data[index].name;
-                listViewItem.lblYear.text = this.data[index].year.toString();
-                listViewItem.lblName.textColor = Color.create(this.data[index].color);
-                listViewItem.lblYear.textColor = Color.create(this.data[index].color);
+            this.listView1.rowHeight = 50;
+            this.listView1.onRowBind = (listViewItem: LviColor, index: number) => {
+                listViewItem.colorName = this.data[index].name;
+                listViewItem.colorYear = this.data[index].year.toString();
+                listViewItem.color = this.data[index].color;
             }
             
-            this.flexLayout1.listView1.onPullRefresh = () => {
+            this.listView1.onPullRefresh = () => {
                 this.refreshListView();
-                this.flexLayout1.listView1.stopRefresh();
+                this.listView1.stopRefresh();
             }
         }
 
     refreshListView() {
-        this.flexLayout1.listView1.itemCount = this.data.length;
-        this.flexLayout1.listView1.refreshData();
+        this.listView1.itemCount = this.data.length;
+        this.listView1.refreshData();
     }
 
     getColors = async () => {

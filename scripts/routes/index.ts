@@ -45,25 +45,25 @@ const router = Router.of({
                         headerBarStyle: { visible: true }
                     })
                 }),
-                StackRouter.of({
-                    path: "/pages",
-                    modal: true,
-                    routes: [
-                        Route.of({
-                            path: "/pages/pageRegister",
-                            build: buildExtender({
-                                getPageClass: () => Pages.PageRegister,
-                                headerBarStyle: { visible: true }
-                            })
-                        })
-                    ]
-                }),
                 Route.of({
                     path: "/pages/pageForgotPassword",
                     build: buildExtender({
                         getPageClass: () => Pages.PageForgotPassword,
                         headerBarStyle: { visible: true }
                     })
+                }),
+                StackRouter.of({
+                    path: "/pages/auth",
+                    modal: true,
+                    routes: [
+                        Route.of({
+                            path: "/pages/auth/pageRegister",
+                            build: buildExtender({
+                                getPageClass: () => Pages.PageRegister,
+                                headerBarStyle: { visible: true }
+                            })
+                        })
+                    ]
                 })
             ]
         })
