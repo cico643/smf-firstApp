@@ -29,6 +29,10 @@ export default class Page1 extends Page1Design {
             this.router.push("/pages/pageForgotPassword", { message: "Did you forget your password?"});
         }
 
+        this.lblSetting.onTouch = () => {
+            this.router.push("/pages/settings/pageSetting");
+        }
+
     }
 
 

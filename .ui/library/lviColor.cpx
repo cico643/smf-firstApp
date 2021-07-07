@@ -6,8 +6,7 @@
 			"id": "b317-479f-0ccc-51c7",
 			"props": {
 				"children": [
-					"7ac1-a6e6-9568-00ba",
-					"d947-3401-74da-56a0"
+					"cf54-7689-6d64-a734"
 				],
 				"name": "lviColor",
 				"parent": "57f4-201f-4bfc-5fc6"
@@ -19,7 +18,7 @@
 			"userProps": {
 				"flexProps": {
 					"flexDirection": "ROW",
-					"alignItems": "CENTER",
+					"alignItems": "STRETCH",
 					"justifyContent": "SPACE_BETWEEN",
 					"alignContent": "STRETCH",
 					"alignSelf": "STRETCH"
@@ -30,13 +29,41 @@
 			}
 		},
 		{
+			"className": ".sf-flexLayout",
+			"id": "cf54-7689-6d64-a734",
+			"props": {
+				"children": [
+					"3179-9b7f-a45c-c4df",
+					"f167-8961-6354-596b"
+				],
+				"name": "flexLayout1",
+				"parent": "b317-479f-0ccc-51c7",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"backgroundColor": "rgba( 155, 155, 155, 0.21 )",
+				"flexProps": {
+					"flexGrow": 1,
+					"flexDirection": "ROW"
+				},
+				"height": null,
+				"testId": "vtFm9nUnl",
+				"usePageVariable": true
+			}
+		},
+		{
 			"className": ".sf-label",
-			"id": "7ac1-a6e6-9568-00ba",
+			"id": "3179-9b7f-a45c-c4df",
 			"props": {
 				"children": [],
 				"name": "lblName",
-				"parent": "b317-479f-0ccc-51c7",
-				"text": "label1"
+				"parent": "cf54-7689-6d64-a734",
+				"text": "label1",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
@@ -46,18 +73,20 @@
 				"flexProps": {
 					"flexGrow": 3
 				},
-				"testId": "yIEvAa7FV",
-				"text": "label1"
+				"testId": "z9_eTnBn1",
+				"text": "label1",
+				"usePageVariable": true
 			}
 		},
 		{
 			"className": ".sf-label",
-			"id": "d947-3401-74da-56a0",
+			"id": "f167-8961-6354-596b",
 			"props": {
 				"children": [],
 				"name": "lblYear",
-				"parent": "b317-479f-0ccc-51c7",
-				"text": "label1"
+				"parent": "cf54-7689-6d64-a734",
+				"text": "label1",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
@@ -67,8 +96,9 @@
 				"flexProps": {
 					"flexGrow": 1
 				},
-				"testId": "yIEvAa7FV",
-				"text": "label1"
+				"testId": "z9_eTnBn1",
+				"text": "label1",
+				"usePageVariable": true
 			}
 		}
 	]

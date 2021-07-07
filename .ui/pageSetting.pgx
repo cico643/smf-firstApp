@@ -1,0 +1,53 @@
+{
+	"components": [
+		{
+			"className": ".sf-page",
+			"id": "7992-a487-00b3-dfce",
+			"initialized": true,
+			"props": {
+				"children": [
+					"5231-20b7-6308-b5a9",
+					"b919-3ab2-7b49-4afb"
+				],
+				"name": "pageSetting",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {},
+			"version": "0.0.1.a"
+		},
+		{
+			"className": ".sf-statusBar",
+			"id": "5231-20b7-6308-b5a9",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "7992-a487-00b3-dfce"
+			},
+			"type": "StatusBar",
+			"userProps": {
+				"android": {
+					"color": "rgba( 245, 166, 35, 1 )"
+				}
+			}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "b919-3ab2-7b49-4afb",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "7992-a487-00b3-dfce",
+				"title": "pageSetting"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"backgroundColor": "rgba( 245, 166, 35, 1 )",
+				"title": "pageSetting"
+			}
+		}
+	]
+}

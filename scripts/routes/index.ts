@@ -32,13 +32,6 @@ const router = Router.of({
                     routeDidEnter: androidModalDismiss
                 }),
                 Route.of({
-                    path: "/pages/page2",
-                    build: buildExtender({ 
-                        getPageClass: () => Pages.Page2, 
-                        headerBarStyle: { visible: true } 
-                    })
-                }),
-                Route.of({
                     path: "/pages/pageHome",
                     build: buildExtender({
                         getPageClass: () => Pages.PageHome,
@@ -61,6 +54,20 @@ const router = Router.of({
                             build: buildExtender({
                                 getPageClass: () => Pages.PageRegister,
                                 headerBarStyle: { visible: true }
+                            })
+                        })
+                    ]
+                }),
+                StackRouter.of({
+                    path: "/pages/settings",
+                    to: "/pages/settings/pageSetting",
+                    modal: true,
+                    routes: [
+                        Route.of({
+                            path: "/pages/settings/pageSetting",
+                            build: buildExtender({
+                                getPageClass: () => Pages.PageSetting,
+                                headerBarStyle: { visible: false }
                             })
                         })
                     ]
