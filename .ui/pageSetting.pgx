@@ -7,7 +7,8 @@
 			"props": {
 				"children": [
 					"5231-20b7-6308-b5a9",
-					"b919-3ab2-7b49-4afb"
+					"b919-3ab2-7b49-4afb",
+					"b382-29ce-4505-cbc8"
 				],
 				"name": "pageSetting",
 				"orientation": "PORTRAIT",
@@ -47,6 +48,19 @@
 			"userProps": {
 				"backgroundColor": "rgba( 245, 166, 35, 1 )",
 				"title": "pageSetting"
+			}
+		},
+		{
+			"className": ".sf-listView",
+			"id": "b382-29ce-4505-cbc8",
+			"props": {
+				"children": [],
+				"name": "listView1",
+				"parent": "7992-a487-00b3-dfce"
+			},
+			"type": "ListView",
+			"userProps": {
+				"testId": "q-atxCSU5"
 			}
 		}
 	]

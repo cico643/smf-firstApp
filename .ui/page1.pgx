@@ -95,6 +95,7 @@
 				"ios": {
 					"shadowColor": "rgba( 0, 0, 0, 1 )"
 				},
+				"marginTop": 1,
 				"testId": "mD2aTqbMT",
 				"text": "",
 				"textAlignment": "MIDRIGHT",
@@ -118,6 +119,7 @@
 					"flexGrow": 0
 				},
 				"marginBottom": 8,
+				"marginTop": 1,
 				"testId": "m8WZwrKoz",
 				"text": "Login",
 				"textAlignment": "MIDCENTER",
