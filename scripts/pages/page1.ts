@@ -7,7 +7,7 @@ import setupButtonActivity from "@smartface/extension-utils/lib/button-activity"
 import SecureData from "@smartface/native/global/securedata";
 import HeaderBarItem from '@smartface/native/ui/headerbaritem';
 import Color from '@smartface/native/ui/color';
-import * as jwtStore from "store/jwtStore";
+import * as DataStore from "store/dataStore";
 
 export default class Page1 extends Page1Design {
     router: any;
@@ -21,6 +21,7 @@ export default class Page1 extends Page1Design {
         this.onShow = onShow.bind(this, this.onShow.bind(this));
 		// Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+
 
 
         setupButtonActivity(this.btnLogin, this.loginActivityIndicator , this.onLoginButtonPress);
@@ -42,11 +43,11 @@ export default class Page1 extends Page1Design {
                const response = await userService.login(this.mtbUsername.materialTextBox.text, this.mtbPassword.materialTextBox.text);
                // await new Promise(r => setTimeout(r, 2000));
 
-               jwtStore.setJwt('userToken', JSON.stringify(response));
-               jwtStore.setIsLoggedIn('userLogged', true);
+               DataStore.setJwt(JSON.stringify(response));
+               DataStore.setIsLoggedIn(true);
                
                hideIndicator();
-               this.router.push("/pages/pageHome", { message: "Hello World!" });
+               this.router.push("/pages/pageHome");
             } catch (err) {
                 hideIndicator();
                 alert("Invalid credentials");
@@ -58,10 +59,10 @@ export default class Page1 extends Page1Design {
 
 
     autoLogin = async () => {
-        if(jwtStore.getIsLoggedIn("userLogged")) {
+        if(DataStore.getIsLoggedIn()) {
             try {
-                const token = jwtStore.getJwt("userToken");
-                this.router.push("/pages/pageHome", { message: token });
+                const token = DataStore.getJwt();
+                this.router.push("/pages/pageHome");
             } catch (err) {
                 console.error(err);
             }
@@ -69,12 +70,18 @@ export default class Page1 extends Page1Design {
         
     }
    
+    initTextValue() {
+        this.lblLoginText.text = global.lang["login"];
+        this.lblForgotPassword.text = global.lang["forgotPassword"];
+        this.btnLogin.text = global.lang["login"];
+    }
+
     initMaterialTextBoxes() {
         this.mtbUsername.options = {
-            hint: "Username"
+            hint: global.lang["username"]
         };
         this.mtbPassword.options = {
-            hint: "Password"
+            hint: global.lang["password"]
         };
         this.mtbPassword.materialTextBox.isPassword = true;
     }
@@ -108,14 +115,15 @@ function onLoad(superOnLoad: () => void) {
 
     this.headerBar.backgroundColor = Color.create("#F5A623");
     this.signUpItem = new HeaderBarItem({
-        title: 'SIGN UP',
+        title: global.lang["signUp"],
         onPress: () => {
-            this.router.push("/pages/auth/pageRegister", { message: "You are about to sign up.."});
+            this.router.push("/pages/auth/pageRegister");
         }
     });
 
     this.headerBar.setItems([this.signUpItem]);
     this.initMaterialTextBoxes();
+    this.initTextValue();
     this.autoLogin();
 
 }

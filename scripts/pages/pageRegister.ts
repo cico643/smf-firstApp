@@ -21,21 +21,26 @@ export default class PageRegister extends PageRegisterDesign {
         try {
             const username = this.mtbUsername.materialTextBox.text;
             const password = this.mtbPassword.materialTextBox.text;
-            this.btnRegister.text = 'Signing up...';
+            this.btnRegister.text = global.lang["signingUp"];
             await UserService.register(username, password);
             this.router.dismiss();
         } catch (err) {
-            this.btnRegister.text = 'Sign up';
+            this.btnRegister.text = global.lang["signUp"];
         }
         
     }
 
+    initTextValue() {
+        this.btnRegister.text = global.lang["signUp"];
+        this.lblHeader.text = global.lang["createAccount"];
+    }
+
     initMaterialTextBoxes() {
         this.mtbUsername.options = {
-            hint: "Username"
+            hint: global.lang["username"]
         };
         this.mtbPassword.options = {
-            hint: "Password"
+            hint: global.lang["password"]
         };
         this.mtbPassword.materialTextBox.isPassword = true;
     }
@@ -59,4 +64,5 @@ function onShow(superOnShow: () => void) {
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
     this.initMaterialTextBoxes();
+    this.initTextValue();
 }

@@ -3,6 +3,7 @@ import LviTwoLabel from "components/LviTwoLabel";
 import Menu from "@smartface/native/ui/menu";
 import MenuItem from "@smartface/native/ui/menuitem";
 import Application from '@smartface/native/application';
+import * as DataStore from "store/dataStore";
 
 type listViewItemData = {
     title: string;
@@ -73,18 +74,18 @@ function onShow(superOnShow: () => void) {
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
     this.dataSet = [{
-        title: 'Language',
-        content: 'en'
+        title: global.lang["language"],
+        content: DataStore.getLang() || Device.language.toUpperCase()
     },
     {
-        title: 'Theme',
+        title: global.lang["theme"],
         content: 'Light'
     }]
     this.initListView();
      
 
     this.langMenu = new Menu();
-    this.langMenu.headerTitle = "Select your language";
+    this.langMenu.headerTitle = global.lang["selectLanguage"];
 
     //@ts-ignore
     this.menuItem1 = new MenuItem({
@@ -92,6 +93,8 @@ function onLoad(superOnLoad: () => void) {
         onSelected: () => {
             this.dataSet[0].content = 'en';
             this.refreshListView();
+            DataStore.setLang("en");
+            Application.restart();
            
         }
     })
@@ -102,6 +105,8 @@ function onLoad(superOnLoad: () => void) {
         onSelected: () => {
             this.dataSet[0].content = 'tr';
             this.refreshListView();
+            DataStore.setLang("tr");
+            Application.restart();
         }
     })
 

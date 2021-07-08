@@ -43,5 +43,17 @@ SMF.i18n.defineLanguage('en', {
 	"useFaceIDMessage": "Would you like to use FaceID login on your future logins?",
 	"scanFaceIDTitle": "Login with FaceID",
 	"scanFaceIDMessage": "Scan your face",
-	"chooseNavigationApp": "Choose Navigation App"
+    "chooseNavigationApp": "Choose Navigation App",
+    "login": "Login",
+    "forgotPassword": "Forgot password?",
+    "username": "Username",
+    "password": "Password",
+    "signUp": "SIGN UP",
+    "email": "Email",
+    "sendMail": "SEND MAIL",
+    "theme": "Theme",
+    "language": "Language",
+    "selectLanguage": "Select your language",
+    "createAccount": "Create new account",
+    "signingUp": "Signing up..."
 });

@@ -42,4 +42,16 @@ SMF.i18n.defineLanguage('tr', {
 	"scanFaceIDTitle": "FaceID ile oturum aç",
 	"scanFaceIDMessage": "Yüzünü tarat",
     "chooseNavigationApp": "Navigasyon uygulaması seç",
+    "login": "Giriş yap",
+    "forgotPassword": "Şifreni mi unuttun?",
+    "username": "Kullanıcı Adı",
+    "password": "Parola",
+    "signUp": "Kayıt ol",
+    "email": "E-posta",
+    "sendMail": "Mail Gönder",
+    "theme": "Tema",
+    "language": "Dil",
+    "selectLanguage": "Dili seçiniz",
+    "createAccount": "Yeni hesap oluştur",
+    "signingUp": "Kayıt gerçekleşiyor..."
 });

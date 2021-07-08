@@ -6,12 +6,14 @@ export default class PageForgotPassword extends PageForgotPasswordDesign {
 		// Overrides super.onShow method
 		this.onShow = onShow.bind(this, this.onShow.bind(this));
 		// Overrides super.onLoad method
-		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+        this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+        
+        this.btnSendMail.text = global.lang["sendMail"];
     }
     
     initMaterialTextBoxes() {
         this.mtbEmail.options = {
-            hint: "Email"
+            hint: global.lang["email"]
         }
     }
 }

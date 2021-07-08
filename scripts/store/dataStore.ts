@@ -1,0 +1,29 @@
+import Data from "@smartface/native/global/data";
+
+
+export function getIsLoggedIn(): boolean {
+    return Data.getBooleanVariable("userLogged");
+}
+
+export function setIsLoggedIn(value: boolean): void {
+    Data.setBooleanVariable('userLogged', value);
+}
+
+
+export function getJwt(): string {
+    return Data.getStringVariable("userToken");
+}
+
+
+export function setJwt(value: string): void {
+    Data.setStringVariable('userToken', value);
+}
+
+
+export function getLang(): string {
+    return Data.getStringVariable("appLanguage");
+}
+
+export function setLang(value: string): void {
+    Data.setStringVariable('appLanguage', value);
+}
