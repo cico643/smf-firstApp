@@ -63,6 +63,10 @@
 			},
 			"type": "ListView",
 			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"height": null,
 				"testId": "kGai0QW_j",
 				"usePageVariable": true
 			}

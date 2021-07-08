@@ -47,4 +47,5 @@ import 'i18n/en';
 import 'i18n/fi';
 import 'i18n/tr';
 
-SMF.i18n.switchLanguage(Device.language);
+
+export default SMF.i18n.switchLanguage(Device.language);

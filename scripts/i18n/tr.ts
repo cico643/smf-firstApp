@@ -4,7 +4,7 @@ SMF.i18n.defineLanguage('tr', {
 	"done": "Yapıldı",
 	"copyURL": "Adresi Kopyala",
 	"cut": "Kes",
-	"no": "Hayır",
+    "no": "Hayır",
 	"ok": "Tamam",
 	"paste": "Yapıştır",
 	"selectAll": "Tamamını Seç",
@@ -41,5 +41,5 @@ SMF.i18n.defineLanguage('tr', {
 	"useFaceIDMessage": "Gelecekteki oturum açmalarında FaceID kullanmak ister misin?",
 	"scanFaceIDTitle": "FaceID ile oturum aç",
 	"scanFaceIDMessage": "Yüzünü tarat",
-	"chooseNavigationApp": "Navigasyon uygulaması seç"
+    "chooseNavigationApp": "Navigasyon uygulaması seç",
 });

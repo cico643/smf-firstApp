@@ -1,6 +1,6 @@
 import PageHomeDesign from 'generated/pages/pageHome';
 import { colorData, getColorData } from "services/colorDataApi";
-import LviColor from "components/LviColor";
+import LviTwoLabel from "components/LviTwoLabel";
 
 export default class PageHome extends PageHomeDesign {
     private data: colorData[] = [];
@@ -17,9 +17,9 @@ export default class PageHome extends PageHomeDesign {
     initListView() {
 
             this.listView1.rowHeight = 50;
-            this.listView1.onRowBind = (listViewItem: LviColor, index: number) => {
-                listViewItem.colorName = this.data[index].name;
-                listViewItem.colorYear = this.data[index].year.toString();
+            this.listView1.onRowBind = (listViewItem: LviTwoLabel, index: number) => {
+                listViewItem.titleText = this.data[index].name;
+                listViewItem.contentText = this.data[index].year.toString();
                 listViewItem.color = this.data[index].color;
             }
             

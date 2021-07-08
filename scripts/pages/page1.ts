@@ -58,7 +58,6 @@ export default class Page1 extends Page1Design {
 
 
     autoLogin = async () => {
-
         if(jwtStore.getIsLoggedIn("userLogged")) {
             try {
                 const token = jwtStore.getJwt("userToken");
@@ -88,7 +87,6 @@ export default class Page1 extends Page1Design {
 function onShow(superOnShow: () => void) {
   superOnShow();
   this.headerBar.titleLayout.applyLayout();
-  this.autoLogin();
   this.mtbUsername.materialTextBox.text = userService.getUsername();
 }
 
@@ -118,4 +116,6 @@ function onLoad(superOnLoad: () => void) {
 
     this.headerBar.setItems([this.signUpItem]);
     this.initMaterialTextBoxes();
+    this.autoLogin();
+
 }
