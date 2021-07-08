@@ -53,5 +53,8 @@ SMF.i18n.defineLanguage('tr', {
     "language": "Dil",
     "selectLanguage": "Dili seçiniz",
     "createAccount": "Yeni hesap oluştur",
-    "signingUp": "Kayıt gerçekleşiyor..."
+    "signingUp": "Kayıt gerçekleşiyor...",
+    "selectTheme": "Temayı seçiniz",
+    "light": "Açık",
+    "dark": "Koyu"
 });

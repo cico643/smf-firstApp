@@ -13,6 +13,7 @@ type listViewItemData = {
 export default class PageSetting extends PageSettingDesign {
     router: any;
     langMenu: Menu;
+    themeMenu: Menu;
     dataSet: listViewItemData[] = [];
 	constructor() {
 		super();
@@ -32,6 +33,12 @@ export default class PageSetting extends PageSettingDesign {
             if(index == 0 && !listViewItem.onTouch) {
                 listViewItem.onTouch = () => {
                     this.langMenu.show(this);
+                }
+            }
+
+            if(index == 1 && !listViewItem.onTouch) {
+                listViewItem.onTouch = () => {
+                    this.themeMenu.show(this);
                 }
             }
         }
@@ -79,37 +86,42 @@ function onLoad(superOnLoad: () => void) {
     },
     {
         title: global.lang["theme"],
-        content: 'Light'
+        content: 'LIGHT'
     }]
     this.initListView();
      
 
     this.langMenu = new Menu();
     this.langMenu.headerTitle = global.lang["selectLanguage"];
+    this.themeMenu = new Menu();
+    this.themeMenu.headerTitle = global.lang["selectTheme"];
 
-    //@ts-ignore
-    this.menuItem1 = new MenuItem({
-        title: 'EN',
-        onSelected: () => {
-            this.dataSet[0].content = 'en';
-            this.refreshListView();
-            DataStore.setLang("en");
-            Application.restart();
-           
-        }
-    })
 
-    // @ts-ignore
-    this.menuItem2 = new MenuItem({
-        title: 'TR',
-        onSelected: () => {
-            this.dataSet[0].content = 'tr';
-            this.refreshListView();
-            DataStore.setLang("tr");
-            Application.restart();
-        }
-    })
+    ['EN', 'TR'].forEach((value) => {
+        //@ts-ignore
+        const menuItem = new MenuItem({
+            title: value,
+            onSelected: () => {
+                this.dataSet[0].content = value.toLowerCase();
+                this.refreshListView();
+                DataStore.setLang(value.toLowerCase());
+                Application.restart();
+            }
+        })
+        this.langMenu.items.push(menuItem);
+    });
 
-    this.langMenu.items = [this.menuItem1, this.menuItem2];
+   
+    [global.lang['light'], global.lang['dark']].forEach((value) => {
+        //@ts-ignore
+        const menuItem = new MenuItem({
+            title: value,
+            onSelected: () => {
+                this.dataSet[1].content = value.toUpperCase();
+                this.refreshListView();
+            }
+        })
+        this.themeMenu.items.push(menuItem);
+    });
 
 }
