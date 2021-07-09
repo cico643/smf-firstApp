@@ -58,5 +58,6 @@ SMF.i18n.defineLanguage('en', {
     "signingUp": "Signing up...",
     "selectTheme": "Select your theme",
     "light": "Light",
-    "dark": "Dark"
+    "dark": "Dark",
+    "darkTheme": "Dark Theme"
 });

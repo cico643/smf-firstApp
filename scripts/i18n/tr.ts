@@ -56,5 +56,6 @@ SMF.i18n.defineLanguage('tr', {
     "signingUp": "Kayıt gerçekleşiyor...",
     "selectTheme": "Temayı seçiniz",
     "light": "Açık",
-    "dark": "Koyu"
+    "dark": "Koyu",
+    "darkTheme": "Dark Tema"
 });

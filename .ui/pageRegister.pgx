@@ -65,22 +65,15 @@
 			},
 			"type": "Button",
 			"userProps": {
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
 				"borderRadius": 0,
 				"borderWidth": 0,
 				"font": {
 					"size": 24,
 					"bold": false,
-					"italic": false,
-					"family": "FontAwesome5FreeRegular",
-					"style": null
-				},
-				"ios": {
-					"shadowColor": "rgba( 0, 0, 0, 1 )"
+					"style": "Regular"
 				},
 				"testId": "3lOraTcC1",
 				"text": "",
-				"textAlignment": "MIDRIGHT",
 				"usePageVariable": true
 			}
 		},

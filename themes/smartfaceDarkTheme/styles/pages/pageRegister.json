@@ -1,21 +1,21 @@
 {
 	"#pageRegister": {
 		"&-btnCancel": {
-			"textColor": "#000000",
+			"textColor": "rgba( 255, 255, 255, 1 )",
 			"font": {
 				"size": 24,
 				"style": null,
-				"italic": false,
 				"family": "FontAwesome5FreeRegular",
-				"bold": false
+				"bold": false,
+				"italic": false
 			},
 			"border": {
 				"style": "none"
 			},
-			"ios": {
-				"shadowColor": "rgba( 0, 0, 0, 1 )"
-			},
 			"textAlignment": "MIDRIGHT",
+			"ios": {
+				"shadowColor": "rgba(255,255,255,1)"
+			},
 			"backgroundColor": "rgba( 255, 255, 255, 0 )"
 		}
 	}

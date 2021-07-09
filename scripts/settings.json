@@ -1,12 +1,13 @@
 {
 	"config": {
 		"theme": {
-			"currentTheme": "loginTheme",
+			"currentTheme": "smartfaceDarkTheme",
 			"baseTheme": "baseTheme",
 			"themes": [
 				"defaultTheme",
 				"baseTheme",
-				"loginTheme"
+				"loginTheme",
+				"smartfaceDarkTheme"
 			]
 		},
 		"paths": {

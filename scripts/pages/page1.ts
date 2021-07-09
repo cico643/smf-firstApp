@@ -8,6 +8,7 @@ import SecureData from "@smartface/native/global/securedata";
 import HeaderBarItem from '@smartface/native/ui/headerbaritem';
 import Color from '@smartface/native/ui/color';
 import * as DataStore from "store/dataStore";
+import { ThemeService } from 'theme';
 
 export default class Page1 extends Page1Design {
     router: any;
@@ -27,7 +28,7 @@ export default class Page1 extends Page1Design {
         setupButtonActivity(this.btnLogin, this.loginActivityIndicator , this.onLoginButtonPress);
 
         this.lblForgotPassword.onTouch = () => {
-            this.router.push("/pages/pageForgotPassword", { message: "Did you forget your password?"});
+            this.router.push("/pages/pageForgotPassword");
         }
 
         this.lblSetting.onTouch = () => {
@@ -96,14 +97,16 @@ function onShow(superOnShow: () => void) {
   this.headerBar.titleLayout.applyLayout();
   this.mtbUsername.materialTextBox.text = userService.getUsername();
 }
-
 /**
+
  * @event onLoad
  * This event is called once when page is created.
  */
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
     console.info('Onload page1');
+    const theme = DataStore.getTheme() || "loginTheme";
+    ThemeService.changeTheme(theme);
 
 
     this.headerBar.leftItemEnabled = false;

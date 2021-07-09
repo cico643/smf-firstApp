@@ -27,3 +27,11 @@ export function getLang(): string {
 export function setLang(value: string): void {
     Data.setStringVariable('appLanguage', value);
 }
+
+export function getTheme(): string {
+    return Data.getStringVariable("appTheme");
+}
+
+export function setTheme(value: string): void {
+    return Data.setStringVariable("appTheme", value);
+}

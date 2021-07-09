@@ -54,9 +54,7 @@
 			"className": ".sf-listView",
 			"id": "b382-29ce-4505-cbc8",
 			"props": {
-				"children": [
-					"fd65-2dea-8ac8-46e8"
-				],
+				"children": [],
 				"name": "listView1",
 				"parent": "7992-a487-00b3-dfce",
 				"usePageVariable": true
@@ -69,43 +67,6 @@
 				"height": null,
 				"testId": "q-atxCSU5",
 				"usePageVariable": true
-			}
-		},
-		{
-			"className": ".sf-listViewItem",
-			"hiddenComponent": false,
-			"id": "fd65-2dea-8ac8-46e8",
-			"props": {
-				"children": [],
-				"name": "lviTwoLabel",
-				"parent": "b382-29ce-4505-cbc8"
-			},
-			"source": {
-				"page": "__library__",
-				"type": "lviTwoLabel",
-				"id": "b317-479f-0ccc-51c7"
-			},
-			"type": "ListViewItem",
-			"userProps": {
-				"flex": {
-					"flexDirection": 2,
-					"alignItems": 4,
-					"justifyContent": 3,
-					"alignContent": 4,
-					"alignSelf": 4,
-					"positionType": 0
-				},
-				"flexProps": {
-					"flexDirection": "ROW",
-					"alignItems": "STRETCH",
-					"justifyContent": "SPACE_BETWEEN",
-					"alignContent": "STRETCH",
-					"alignSelf": "STRETCH",
-					"positionType": "RELATIVE"
-				},
-				"left": 0,
-				"testId": "08lCNCLltX",
-				"top": 0
 			}
 		}
 	]

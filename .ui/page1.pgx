@@ -50,9 +50,6 @@
 			},
 			"type": "StatusBar",
 			"userProps": {
-				"android": {
-					"color": "rgba( 245, 166, 35, 1 )"
-				},
 				"visible": true
 			}
 		},
@@ -68,13 +65,12 @@
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"backgroundColor": "rgba( 245, 166, 35, 1 )",
 				"title": "Page1",
 				"visible": true
 			}
 		},
 		{
-			"className": ".sf-label",
+			"className": ".sf-label #page1-lblSetting",
 			"id": "418e-d247-37b3-41fb",
 			"props": {
 				"children": [],
@@ -85,21 +81,9 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"font": {
-					"size": 17,
-					"bold": false,
-					"italic": false,
-					"family": "FontAwesome5FreeSolid",
-					"style": null
-				},
-				"ios": {
-					"shadowColor": "rgba( 0, 0, 0, 1 )"
-				},
 				"marginTop": 1,
 				"testId": "mD2aTqbMT",
 				"text": "",
-				"textAlignment": "MIDRIGHT",
-				"textColor": "rgba( 0, 0, 0, 1 )",
 				"usePageVariable": true
 			}
 		},
@@ -115,14 +99,8 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"flexProps": {
-					"flexGrow": 0
-				},
-				"marginBottom": 8,
-				"marginTop": 1,
 				"testId": "m8WZwrKoz",
 				"text": "Login",
-				"textAlignment": "MIDCENTER",
 				"usePageVariable": true
 			}
 		},
@@ -219,12 +197,6 @@
 			},
 			"type": "Button",
 			"userProps": {
-				"alpha": 0.74,
-				"backgroundColor": "rgba( 245, 166, 35, 1 )",
-				"borderRadius": 20,
-				"flexProps": {
-					"flexGrow": 0
-				},
 				"ios": {
 					"shadowRadius": 0,
 					"shadowOpacity": 0.75,
@@ -234,7 +206,6 @@
 				},
 				"testId": "DFm-THSNN",
 				"text": "LOGIN",
-				"textAlignment": "MIDCENTER",
 				"usePageVariable": true
 			}
 		},
