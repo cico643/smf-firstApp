@@ -10,7 +10,7 @@ export default class PageRegister extends PageRegisterDesign {
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
         
 
-        this.btnCancel.onPress = () => {
+        this.lblCancel.onTouch = () => {
             this.router.dismiss();
         }
 

@@ -8,7 +8,7 @@
 				"children": [
 					"8e46-a827-aff7-b94f",
 					"0bf5-b246-c5a4-e97c",
-					"a9e9-2e4e-d738-ef02",
+					"85ed-d73b-b58a-7627",
 					"2ac6-efff-2890-5ed7",
 					"644b-7cf0-d052-bc81",
 					"064a-c0d9-18e3-bffe",
@@ -54,25 +54,18 @@
 			}
 		},
 		{
-			"className": ".sf-button #pageRegister-btnCancel",
-			"id": "a9e9-2e4e-d738-ef02",
+			"className": ".sf-label #pageRegister-lblCancel",
+			"id": "85ed-d73b-b58a-7627",
 			"props": {
 				"children": [],
-				"name": "btnCancel",
+				"name": "lblCancel",
 				"parent": "1646-fc06-0ab1-08fd",
 				"text": "",
 				"usePageVariable": true
 			},
-			"type": "Button",
+			"type": "Label",
 			"userProps": {
-				"borderRadius": 0,
-				"borderWidth": 0,
-				"font": {
-					"size": 24,
-					"bold": false,
-					"style": "Regular"
-				},
-				"testId": "3lOraTcC1",
+				"testId": "P3XZ9eOJK",
 				"text": "",
 				"usePageVariable": true
 			}

@@ -1,6 +1,6 @@
 {
 	"#pageRegister": {
-		"&-btnCancel": {
+		"&-lblCancel": {
 			"textColor": "#000000",
 			"font": {
 				"size": 24,
