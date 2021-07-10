@@ -36,11 +36,16 @@
 	".sf": {
 		"&-statusBar": {
 			"android": {
-				"color": "rgba( 0, 0, 0, 1 )"
+				"color": "rgba( 0, 0, 0, 1 )",
+                "visible": true,
+                "masksToBounds": true
 			}
 		},
 		"&-headerBar": {
-			"backgroundColor": "rgba( 0, 0, 0, 1 )"
+			"backgroundColor": "rgba( 0, 0, 0, 1 )",
+            "titleColor": "rgba( 255, 255, 255, 1 )",
+            "masksToBounds": true,
+            "visible": true
 		}
 	}
 }

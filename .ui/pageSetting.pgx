@@ -28,11 +28,7 @@
 				"parent": "7992-a487-00b3-dfce"
 			},
 			"type": "StatusBar",
-			"userProps": {
-				"android": {
-					"color": "rgba( 245, 166, 35, 1 )"
-				}
-			}
+			"userProps": {}
 		},
 		{
 			"className": ".sf-headerBar",
@@ -46,7 +42,6 @@
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"backgroundColor": "rgba( 245, 166, 35, 1 )",
 				"title": "pageSetting"
 			}
 		},

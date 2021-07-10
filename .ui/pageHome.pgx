@@ -28,11 +28,7 @@
 				"parent": "ecfb-1ecd-7f59-90c4"
 			},
 			"type": "StatusBar",
-			"userProps": {
-				"android": {
-					"color": "rgba( 245, 166, 35, 1 )"
-				}
-			}
+			"userProps": {}
 		},
 		{
 			"className": ".sf-headerBar",
@@ -46,7 +42,6 @@
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"backgroundColor": "rgba( 245, 166, 35, 1 )",
 				"title": "pageHome"
 			}
 		},

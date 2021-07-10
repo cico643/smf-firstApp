@@ -34,7 +34,8 @@
 		},
 		"&-btnLogin": {
 			"backgroundColor": "#FFFFFF",
-			"textColor": "#000000"
+			"textColor": "#000000",
+			"borderRadius": 20
 		}
 	}
 }

@@ -17,6 +17,11 @@
 			},
 			"textAlignment": "MIDRIGHT",
 			"backgroundColor": "rgba( 255, 255, 255, 0 )"
+		},
+		"&-btnRegister": {
+			"backgroundColor": "rgba( 245, 166, 35, 1 )",
+			"borderRadius": 20,
+			"alpha": 0.74
 		}
 	}
 }

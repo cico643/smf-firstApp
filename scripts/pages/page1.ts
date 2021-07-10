@@ -24,7 +24,6 @@ export default class Page1 extends Page1Design {
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 
 
-
         setupButtonActivity(this.btnLogin, this.loginActivityIndicator , this.onLoginButtonPress);
 
         this.lblForgotPassword.onTouch = () => {
@@ -93,9 +92,11 @@ export default class Page1 extends Page1Design {
  * This event is called when a page appears on the screen (everytime).
  */
 function onShow(superOnShow: () => void) {
-  superOnShow();
-  this.headerBar.titleLayout.applyLayout();
-  this.mtbUsername.materialTextBox.text = userService.getUsername();
+    superOnShow();
+    const theme = DataStore.getTheme() || "loginTheme";
+    ThemeService.changeTheme(theme);
+    this.headerBar.titleLayout.applyLayout();
+    this.mtbUsername.materialTextBox.text = userService.getUsername();
 }
 /**
 
@@ -105,8 +106,6 @@ function onShow(superOnShow: () => void) {
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
     console.info('Onload page1');
-    const theme = DataStore.getTheme() || "loginTheme";
-    ThemeService.changeTheme(theme);
 
 
     this.headerBar.leftItemEnabled = false;

@@ -31,11 +31,7 @@
 				"parent": "1646-fc06-0ab1-08fd"
 			},
 			"type": "StatusBar",
-			"userProps": {
-				"android": {
-					"color": "rgba( 245, 166, 35, 1 )"
-				}
-			}
+			"userProps": {}
 		},
 		{
 			"className": ".sf-headerBar",
@@ -49,7 +45,6 @@
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"backgroundColor": "rgba( 245, 166, 35, 1 )",
 				"title": "pageRegister"
 			}
 		},
@@ -155,7 +150,7 @@
 			}
 		},
 		{
-			"className": ".sf-button",
+			"className": ".sf-button #pageRegister-btnRegister",
 			"id": "be8a-c715-af79-66ba",
 			"props": {
 				"children": [],
@@ -166,9 +161,6 @@
 			},
 			"type": "Button",
 			"userProps": {
-				"alpha": 0.74,
-				"backgroundColor": "rgba( 245, 166, 35, 1 )",
-				"borderRadius": 20,
 				"flexProps": {
 					"alignSelf": "AUTO"
 				},
