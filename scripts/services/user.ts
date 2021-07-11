@@ -35,7 +35,7 @@ export async function login( username: string, password: string): Promise<string
 
 export async function register( username: string, password: string): Promise<void> {
     try {
-        userName = username;
+        
         await sc.request(`/auth-test/register`, {
             method: "POST",
             headers: {
@@ -46,7 +46,7 @@ export async function register( username: string, password: string): Promise<voi
                     password
                 }
         });
-
+        userName = username;
     } catch (err) {
         console.error(err);
         throw err;

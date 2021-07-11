@@ -13,8 +13,8 @@ import { ThemeService } from 'theme';
 export default class Page1 extends Page1Design {
     router: any;
     isSaved: boolean = false;
-    mySecureData: SecureData;
     signUpItem: HeaderBarItem;
+    credentialStatus: boolean = false;
 
 	constructor () {
         super();
@@ -39,15 +39,29 @@ export default class Page1 extends Page1Design {
 
     onLoginButtonPress = async (showIndicator, hideIndicator) => {
         try {
-               showIndicator();
-               const response = await userService.login(this.mtbUsername.materialTextBox.text, this.mtbPassword.materialTextBox.text);
-               // await new Promise(r => setTimeout(r, 2000));
 
-               DataStore.setJwt(JSON.stringify(response));
-               DataStore.setIsLoggedIn(true);
+               if(this.mtbUsername.materialTextBox.text.length < 6 ) {
+                   this.mtbUsername.materialTextBox.errorMessage = this.mtbUsername.materialTextBox.text.length + "/6";
+                   this.credentialStatus = false;
+               }
+               if(this.mtbPassword.materialTextBox.text.length < 6 ) {
+                   this.mtbPassword.materialTextBox.errorMessage = this.mtbPassword.materialTextBox.text.length + "/6";
+                   this.credentialStatus = false;
+               }
+
+               if(this.credentialStatus) {
+                  showIndicator();
+                  const response = await userService.login(this.mtbUsername.materialTextBox.text, this.mtbPassword.materialTextBox.text);
+                  // await new Promise(r => setTimeout(r, 2000));
+
+                  DataStore.setJwt(JSON.stringify(response));
+                  DataStore.setIsLoggedIn(true);
+                
+                  hideIndicator();
+                  this.router.push("/pages/pageHome");
+               }
+            
                
-               hideIndicator();
-               this.router.push("/pages/pageHome");
             } catch (err) {
                 hideIndicator();
                 alert("Invalid credentials");
@@ -77,13 +91,24 @@ export default class Page1 extends Page1Design {
     }
 
     initMaterialTextBoxes() {
+        
         this.mtbUsername.options = {
-            hint: global.lang["username"]
+            hint: global.lang["username"],
+            onActionButtonPress: () => this.mtbPassword.materialTextBox.requestFocus(),
+            onTextChanged: () => {
+                this.credentialStatus = this.mtbUsername.materialTextBox.text.length >= 6;
+                this.mtbUsername.materialTextBox.errorMessage = this.mtbUsername.materialTextBox.text.length >= 6 ? "" : this.mtbUsername.materialTextBox.text.length + "/6";
+            }
         };
         this.mtbPassword.options = {
-            hint: global.lang["password"]
+            hint: global.lang["password"],
+            isPassword: true,
+            onTextChanged: () => {
+                this.credentialStatus = this.mtbPassword.materialTextBox.text.length >= 6;
+                this.mtbPassword.materialTextBox.errorMessage = this.mtbPassword.materialTextBox.text.length >= 6 ? "" : this.mtbPassword.materialTextBox.text.length + "/6";
+            }
         };
-        this.mtbPassword.materialTextBox.isPassword = true;
+
     }
 }
 

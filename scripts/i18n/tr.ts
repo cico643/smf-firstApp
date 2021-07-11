@@ -57,5 +57,6 @@ SMF.i18n.defineLanguage('tr', {
     "selectTheme": "Temayı seçiniz",
     "light": "Açık",
     "dark": "Koyu",
-    "darkTheme": "Dark Tema"
+    "darkTheme": "Dark Tema",
+    "mailValidationError": "Geçerli bir mail adresi girilmeli"
 });

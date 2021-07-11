@@ -2,6 +2,7 @@ import PageRegisterDesign from 'generated/pages/pageRegister';
 import * as UserService from "../services/user";
 export default class PageRegister extends PageRegisterDesign {
     router: any;
+    credentialStatus: boolean = false;
 	constructor() {
 		super();
 		// Overrides super.onShow method
@@ -21,6 +22,14 @@ export default class PageRegister extends PageRegisterDesign {
         try {
             const username = this.mtbUsername.materialTextBox.text;
             const password = this.mtbPassword.materialTextBox.text;
+            if(username.length < 6 ) {
+                   this.mtbUsername.materialTextBox.errorMessage = username.length + "/6";
+                   this.credentialStatus = false;
+               }
+               if(password.length < 6 ) {
+                   this.mtbPassword.materialTextBox.errorMessage = password.length + "/6";
+                   this.credentialStatus = false;
+               }
             this.btnRegister.text = global.lang["signingUp"];
             await UserService.register(username, password);
             this.router.dismiss();
@@ -36,13 +45,23 @@ export default class PageRegister extends PageRegisterDesign {
     }
 
     initMaterialTextBoxes() {
+        
         this.mtbUsername.options = {
-            hint: global.lang["username"]
+            hint: global.lang["username"],
+            onActionButtonPress: () => this.mtbPassword.materialTextBox.requestFocus(),
+            onTextChanged: () => {
+                this.credentialStatus = this.mtbUsername.materialTextBox.text.length >= 6;
+                this.mtbUsername.materialTextBox.errorMessage = this.mtbUsername.materialTextBox.text.length >= 6 ? "" : this.mtbUsername.materialTextBox.text.length + "/6";
+            }
         };
         this.mtbPassword.options = {
-            hint: global.lang["password"]
+            hint: global.lang["password"],
+            isPassword: true,
+            onTextChanged: () => {
+                this.credentialStatus = this.mtbPassword.materialTextBox.text.length >= 6;
+                this.mtbPassword.materialTextBox.errorMessage = this.mtbPassword.materialTextBox.text.length >= 6 ? "" : this.mtbPassword.materialTextBox.text.length + "/6";
+            }
         };
-        this.mtbPassword.materialTextBox.isPassword = true;
     }
 }
 

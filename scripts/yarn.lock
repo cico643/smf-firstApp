@@ -163,6 +163,11 @@ tinycolor2@^1.4.1:
   resolved "https://cd.smartface.io/repository/npm-all-public/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
   integrity sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==
 
+validator@^13.6.0:
+  version "13.6.0"
+  resolved "https://cd.smartface.io/repository/npm-all-public/validator/-/validator-13.6.0.tgz#1e71899c14cdc7b2068463cb24c1cc16f6ec7059"
+  integrity sha512-gVgKbdbHgtxpRyR8K0O6oFZPhhB5tT1jeEHZR0Znr9Svg03U0+r9DXWMrnRAB+HtCStDQKlaIZm42tVsVjqtjg==
+
 void-elements@^1.0.0:
   version "1.0.0"
   resolved "https://cd.smartface.io/repository/npm-all-public/void-elements/-/void-elements-1.0.0.tgz#6e5db1e35d591f5ac690ce1a340f793a817b2c2a"

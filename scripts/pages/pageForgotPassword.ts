@@ -1,6 +1,8 @@
 import PageForgotPasswordDesign from 'generated/pages/pageForgotPassword';
+import isEmail from "validator/lib/isEmail";
 
 export default class PageForgotPassword extends PageForgotPasswordDesign {
+    isValidEmail: boolean = false;
 	constructor() {
 		super();
 		// Overrides super.onShow method
@@ -13,7 +15,11 @@ export default class PageForgotPassword extends PageForgotPasswordDesign {
     
     initMaterialTextBoxes() {
         this.mtbEmail.options = {
-            hint: global.lang["email"]
+            hint: global.lang["email"],
+            onTextChanged: () => {
+                this.isValidEmail = isEmail(this.mtbEmail.materialTextBox.text);
+                this.mtbEmail.materialTextBox.errorMessage = this.isValidEmail ? "" : global.lang["mailValidationError"];
+            }
         }
     }
 }
