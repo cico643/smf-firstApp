@@ -1,19 +1,10 @@
-import ServiceCall from "@smartface/extension-utils/lib/service-call";
+import { scHalit } from "./index";
+
 let userName = "";
-
-
-const sc = new ServiceCall({
-    baseUrl: "https://halitaksoy.com",
-    logEnabled: true,
-    headers: {
-        apiVersion: "1.0"
-    }
-});
-
 
 export async function login( username: string, password: string): Promise<string>  {
             try {
-                const response: string = await sc.request(`/auth-test/login`, {
+                const response: string = await scHalit.request(`/auth-test/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -36,7 +27,7 @@ export async function login( username: string, password: string): Promise<string
 export async function register( username: string, password: string): Promise<void> {
     try {
         
-        await sc.request(`/auth-test/register`, {
+        await scHalit.request(`/auth-test/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

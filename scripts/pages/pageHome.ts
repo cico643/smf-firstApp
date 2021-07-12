@@ -1,9 +1,18 @@
 import PageHomeDesign from 'generated/pages/pageHome';
-import { colorData, getColorData } from "services/colorDataApi";
-import LviTwoLabel from "components/LviTwoLabel";
+import { getPassenger, PassengerData } from "services/passenger";
+import LviThreeLabel from "components/LviThreeLabel";
+
+type DataSetType = {
+    name: string;
+    airline: string;
+    country: string;
+}
 
 export default class PageHome extends PageHomeDesign {
-    private data: colorData[] = [];
+    private dataSet: DataSetType[] = [];
+    isLoading: boolean = false;
+    index: number = 0;
+    pagination: number = 0;
 
 	constructor() {
 		super();
@@ -15,34 +24,47 @@ export default class PageHome extends PageHomeDesign {
     }
     
     initListView() {
+        this.listView1.itemCount = this.dataSet.length + 1;    
 
-            this.listView1.rowHeight = 50;
-            this.listView1.onRowBind = (listViewItem: LviTwoLabel, index: number) => {
-                listViewItem.titleText = this.data[index].name;
-                listViewItem.contentText = this.data[index].year.toString();
-                listViewItem.color = this.data[index].color;
+        this.listView1.onRowType = (index) => {
+                if(this.dataSet.length === index) {// for loading
+                    return 2;
+                }
+                else {
+                    return 1;
+                }
             }
             
-            this.listView1.onPullRefresh = () => {
-                this.refreshListView();
-                this.listView1.stopRefresh();
+        this.listView1.rowHeight = 50;
+
+        this.listView1.onRowBind = async (listViewItem: LviThreeLabel, index: number) => {
+            if(index === this.dataSet.length) {
+                listViewItem.activityIndicator1.visible = true;
+            }
+            else {
+                listViewItem.activityIndicator1.visible = false;
+                listViewItem.lblName.text = this.dataSet[index].name;
+                listViewItem.lblAirline.text = this.dataSet[index].airline;
+                listViewItem.lblCountry.text = this.dataSet[index].country;
+            }   
+
+            if(index > this.dataSet.length - 2 && !this.isLoading) {
+                this.isLoading = true;
+                let response = await getPassenger(this.pagination);
+                this.pagination += 1;
+                for(let i = 0; i < 10; i++) {
+                    let oneResponse = response.data[i];
+                    let oneArr = {name: oneResponse.name, airline: oneResponse.airline.name, country: oneResponse.airline.country};
+                    this.dataSet.push(oneArr);
+                }
+                
+                this.listView1.itemCount = this.dataSet.length + 1;
+                this.listView1.refreshData();
+                this.isLoading = false;
             }
         }
-
-    refreshListView() {
-        this.listView1.itemCount = this.data.length;
-        this.listView1.refreshData();
     }
 
-    getColors = async () => {
-        try {
-            const response = await getColorData();
-            this.data = response.data;
-            this.refreshListView();
-        } catch (err) {
-            console.error(err);
-        }
-    }
 }
 
 /**
@@ -63,5 +85,4 @@ function onShow(superOnShow: () => void) {
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
     this.initListView();
-    this.getColors();
 }

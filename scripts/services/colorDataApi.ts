@@ -1,12 +1,5 @@
-import ServiceCall from "@smartface/extension-utils/lib/service-call";
+import { scColor } from "./index";
 
-const sc = new ServiceCall({
-    baseUrl: "https://reqres.in",
-    logEnabled: true,
-    headers: {
-        apiVersion: "1.0"
-    }
-});
 
 export type colorData = {
     id: number;
@@ -31,7 +24,7 @@ type GetColorDataResponse = {
 
 export async function getColorData(): Promise<GetColorDataResponse> {
     try {
-        const response: GetColorDataResponse = await sc.request("/api/unknown", {
+        const response: GetColorDataResponse = await scColor.request("/api/unknown", {
             method: "GET"
         })
 

@@ -35,6 +35,7 @@ export default class PageRegister extends PageRegisterDesign {
             this.router.dismiss();
         } catch (err) {
             this.btnRegister.text = global.lang["signUp"];
+            alert()
         }
         
     }

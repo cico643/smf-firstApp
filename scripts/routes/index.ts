@@ -29,7 +29,7 @@ const router = Router.of({
                         getPageClass: () => Pages.Page1, 
                         headerBarStyle: { visible: true } 
                     }),
-                     routeDidEnter: androidModalDismiss
+                     //routeDidEnter: androidModalDismiss
                 }),
                 Route.of({
                     path: "/pages/pageHome",

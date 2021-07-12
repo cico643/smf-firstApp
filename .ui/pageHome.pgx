@@ -8,7 +8,7 @@
 				"children": [
 					"0733-af3f-98fc-2dc6",
 					"0e6c-7009-e20a-94c9",
-					"d321-b2cb-aa38-482a"
+					"5a98-8ea6-dbe7-b526"
 				],
 				"name": "pageHome",
 				"orientation": "PORTRAIT",
@@ -47,10 +47,10 @@
 		},
 		{
 			"className": ".sf-listView",
-			"id": "d321-b2cb-aa38-482a",
+			"id": "5a98-8ea6-dbe7-b526",
 			"props": {
 				"children": [
-					"925f-f649-2861-2144"
+					"39aa-c251-60c6-74d5"
 				],
 				"name": "listView1",
 				"parent": "ecfb-1ecd-7f59-90c4",
@@ -61,45 +61,36 @@
 				"flexProps": {
 					"flexGrow": 1
 				},
-				"height": null,
-				"testId": "kGai0QW_j",
+				"testId": "FDS1JguoI",
 				"usePageVariable": true
 			}
 		},
 		{
 			"className": ".sf-listViewItem",
 			"hiddenComponent": false,
-			"id": "925f-f649-2861-2144",
+			"id": "39aa-c251-60c6-74d5",
 			"props": {
 				"children": [],
-				"name": "lviColor",
-				"parent": "d321-b2cb-aa38-482a"
+				"name": "lviThreeLabel",
+				"parent": "5a98-8ea6-dbe7-b526"
 			},
 			"source": {
 				"page": "__library__",
-				"type": "lviColor",
-				"id": "b317-479f-0ccc-51c7"
+				"type": "lviThreeLabel",
+				"id": "6b1c-3b5e-73db-6ca6"
 			},
 			"type": "ListViewItem",
 			"userProps": {
 				"flex": {
-					"flexDirection": 2,
-					"alignItems": 2,
-					"justifyContent": 3,
-					"alignContent": 4,
-					"alignSelf": 4,
 					"positionType": 0
 				},
 				"flexProps": {
-					"flexDirection": "ROW",
-					"alignItems": "CENTER",
-					"justifyContent": "SPACE_BETWEEN",
-					"alignContent": "STRETCH",
-					"alignSelf": "STRETCH",
 					"positionType": "RELATIVE"
 				},
 				"left": 0,
-				"testId": "08lCNCLltX",
+				"paddingBottom": 5,
+				"paddingTop": 5,
+				"testId": "KmItOQSEZ",
 				"top": 0
 			}
 		}

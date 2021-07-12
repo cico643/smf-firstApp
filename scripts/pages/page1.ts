@@ -10,6 +10,8 @@ import Color from '@smartface/native/ui/color';
 import * as DataStore from "store/dataStore";
 import { ThemeService } from 'theme';
 
+
+
 export default class Page1 extends Page1Design {
     router: any;
     isSaved: boolean = false;
@@ -131,7 +133,7 @@ function onShow(superOnShow: () => void) {
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
     console.info('Onload page1');
-
+    
 
     this.headerBar.leftItemEnabled = false;
     this.headerBar.titleLayout = new PageTitleLayout();
