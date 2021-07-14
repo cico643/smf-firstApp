@@ -2,7 +2,7 @@
 	"#pageHome": {
 		"&-flexLayout1": {
 			"textColor": "rgba( 255, 255, 255, 1 )",
-			"backgroundColor": "rgba( 245, 166, 35, 1 )",
+			"backgroundColor": "rgba( 245, 166, 35, 1 )"
 		}
 	}
 }
