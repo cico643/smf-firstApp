@@ -44,6 +44,17 @@
 		},
 		"&-flexLayout": {
 			"backgroundColor": "rgba( 255, 255, 255, 1 )"
+		},
+		"&-label": {
+			"textColor": "rgba( 0, 0, 0, 1 )"
+		},
+		"&-listViewItem": {
+			"flexProps": {
+				"alignContent": "STRETCH",
+				"alignItems": "STRETCH",
+				"alignSelf": "CENTER"
+			},
+			"width": 310
 		}
 	}
 }

@@ -1,0 +1,14 @@
+{
+	".lviTwoLabel": {
+		"&-seperator": {
+			"flexProps": {
+				"positionType": "ABSOLUTE"
+			},
+			"height": 1,
+			"bottom": 0,
+			"right": 0,
+			"left": 15,
+			"backgroundColor": "rgba( 155, 155, 155, 1 )"
+		}
+	}
+}

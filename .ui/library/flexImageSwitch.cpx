@@ -1,0 +1,120 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flexImageSwitch-wrapper",
+			"id": "9838-2b46-853b-27d3",
+			"props": {
+				"children": [
+					"a41f-e386-ce33-fd5b"
+				],
+				"name": "flexImageSwitch",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexDirection": "ROW",
+					"justifyContent": "FLEX_START",
+					"positionType": "RELATIVE"
+				},
+				"height": 63,
+				"left": 128.0701754385965,
+				"testId": "LQesASezr",
+				"top": 35.08771929824562,
+				"width": 130
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flexImageSwitch-flexLayout1",
+			"id": "a41f-e386-ce33-fd5b",
+			"props": {
+				"children": [
+					"e89a-9d5e-f559-3092",
+					"202c-099d-b2b6-146b"
+				],
+				"name": "flexLayout1",
+				"parent": "9838-2b46-853b-27d3"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1,
+					"flexDirection": "ROW",
+					"alignItems": "STRETCH"
+				},
+				"height": null,
+				"testId": "nlcLEjqoK"
+			}
+		},
+		{
+			"className": ".sf-label .flexImageSwitch-lblLeftIcon",
+			"id": "e89a-9d5e-f559-3092",
+			"props": {
+				"children": [],
+				"name": "lblLeftIcon",
+				"parent": "a41f-e386-ce33-fd5b",
+				"text": "",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"font": {
+					"size": 26,
+					"bold": false,
+					"italic": false,
+					"family": "FontAwesome5FreeSolid",
+					"style": null
+				},
+				"height": null,
+				"testId": "SUYqNCH48",
+				"text": "",
+				"textAlignment": "MIDCENTER",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .flexImageSwitch-lblRightIcon",
+			"id": "202c-099d-b2b6-146b",
+			"props": {
+				"children": [],
+				"name": "lblRightIcon",
+				"parent": "a41f-e386-ce33-fd5b",
+				"text": "",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"font": {
+					"size": 26,
+					"bold": false,
+					"italic": false,
+					"family": "FontAwesome5FreeRegular",
+					"style": null
+				},
+				"height": null,
+				"testId": "SUYqNCH48",
+				"text": "",
+				"textAlignment": "MIDCENTER",
+				"usePageVariable": true
+			}
+		}
+	]
+}

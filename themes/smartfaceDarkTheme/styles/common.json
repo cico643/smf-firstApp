@@ -1,2 +1,33 @@
 {
+	"#pageHome": {
+		"&-flexLayout1": {
+			"backgroundColor": "rgba( 255, 255, 255, 1 )"
+		},
+		"&-lblItem": {
+			"textColor": "rgba( 0, 0, 0, 1 )"
+		},
+		"&-listView1": {
+			"backgroundColor": "rgba( 239, 239, 239, 1 )",
+			"borderRadius": 20,
+			"padding": 15,
+			"marginBottom": 0,
+			"marginTop": 0,
+			"borderWidth": 5
+		}
+	},
+	"#pageSetting": {
+		"&-flexLayout1": {
+			"backgroundColor": "rgba( 155, 155, 155, 0.17 )",
+			"marginBottom": 0,
+			"marginTop": 0
+		},
+		"&-listView1": {
+			"height": 115,
+			"borderRadius": 15,
+			"backgroundColor": "rgba( 55, 55, 55, 1 )"
+		}
+	},
+	".asdf": {
+		"backgroundColor": "rgba( 0, 0, 0, 1 )"
+	}
 }

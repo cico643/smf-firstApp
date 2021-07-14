@@ -58,5 +58,8 @@ SMF.i18n.defineLanguage('tr', {
     "light": "Açık",
     "dark": "Koyu",
     "darkTheme": "Dark Tema",
-    "mailValidationError": "Geçerli bir mail adresi girilmeli"
+    "mailValidationError": "Geçerli bir mail adresi girilmeli",
+    "name": "İsim",
+    "country": "Ülke",
+    "established": "Kuruluş yılı"
 });

@@ -60,5 +60,8 @@ SMF.i18n.defineLanguage('en', {
     "light": "Light",
     "dark": "Dark",
     "darkTheme": "Dark Theme",
-    "mailValidationError": "You must enter a valid email"
+    "mailValidationError": "You must enter a valid email",
+    "name": "Name",
+    "country": "Country",
+    "established": "Established"
 });

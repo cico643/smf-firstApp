@@ -1,0 +1,122 @@
+{
+	"components": [
+		{
+			"className": ".sf-page",
+			"id": "9a0a-ceac-176b-663c",
+			"initialized": true,
+			"props": {
+				"children": [
+					"84bd-7527-03f8-bab0",
+					"ef9e-91a2-df35-a226",
+					"ad78-4329-aff5-2bf4",
+					"2cf0-6363-725c-f610"
+				],
+				"name": "pageAirlineDetail",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {},
+			"version": "0.0.1.a"
+		},
+		{
+			"className": ".sf-statusBar",
+			"id": "84bd-7527-03f8-bab0",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "9a0a-ceac-176b-663c"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "ef9e-91a2-df35-a226",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "9a0a-ceac-176b-663c",
+				"title": "pageAirlineDetail"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "pageAirlineDetail"
+			}
+		},
+		{
+			"className": ".sf-imageView",
+			"id": "ad78-4329-aff5-2bf4",
+			"props": {
+				"children": [],
+				"name": "imageView1",
+				"parent": "9a0a-ceac-176b-663c",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"height": 100,
+				"imageFillType": "ASPECTFIT",
+				"testId": "UZC31-AZ4",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-listView",
+			"id": "2cf0-6363-725c-f610",
+			"props": {
+				"children": [
+					"493d-f32a-adae-bb9a"
+				],
+				"name": "listView1",
+				"parent": "9a0a-ceac-176b-663c",
+				"usePageVariable": true
+			},
+			"type": "ListView",
+			"userProps": {
+				"marginTop": 50,
+				"testId": "Y_VQ7PerW",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-listViewItem",
+			"hiddenComponent": false,
+			"id": "493d-f32a-adae-bb9a",
+			"props": {
+				"children": [],
+				"name": "lviTwoLabel",
+				"parent": "2cf0-6363-725c-f610"
+			},
+			"source": {
+				"page": "__library__",
+				"type": "lviTwoLabel",
+				"id": "b317-479f-0ccc-51c7"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flex": {
+					"flexDirection": 2,
+					"alignItems": 4,
+					"justifyContent": 3,
+					"alignContent": 4,
+					"alignSelf": 4,
+					"positionType": 0
+				},
+				"flexProps": {
+					"flexDirection": "ROW",
+					"alignItems": "STRETCH",
+					"justifyContent": "SPACE_BETWEEN",
+					"alignContent": "STRETCH",
+					"alignSelf": "STRETCH",
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"testId": "08lCNCLltX",
+				"top": 0
+			}
+		}
+	]
+}

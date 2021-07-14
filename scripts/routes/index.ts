@@ -7,6 +7,19 @@ import {
 import * as Pages from 'pages';
 import "@smartface/extension-utils/lib/router/goBack"; // Implements onBackButtonPressed
 import System from "@smartface/native/device/system";
+import backClose from "@smartface/extension-utils/lib/router/back-close";
+import Image from "@smartface/native/ui/image";
+import Color from "@smartface/native/ui/color";
+
+
+//backClose.setDefaultBackStyle({image: Image.createFromFile("images://arrow_back.png"), hideTitle: true});
+
+backClose.dissmissBuilder = () => {
+    return {
+        image: Image.createFromFile("images://window_close.png"),
+        position: "left",
+    };
+};
 
 const androidModalDismiss = (router, route) => {
     const { view, action } = route.getState();
@@ -45,6 +58,13 @@ const router = Router.of({
                         headerBarStyle: { visible: true }
                     })
                 }),
+                Route.of({
+                    path: "/pages/pageAirlineDetail",
+                    build: buildExtender({
+                        getPageClass: () => Pages.PageAirlineDetail,
+                        headerBarStyle: { visible: true }
+                    })
+                }),
                 StackRouter.of({
                     path: "/pages/auth",
                     modal: true,
@@ -53,6 +73,19 @@ const router = Router.of({
                             path: "/pages/auth/pageRegister",
                             build: buildExtender({
                                 getPageClass: () => Pages.PageRegister,
+                                headerBarStyle: { visible: true }
+                            })
+                        })
+                    ]
+                }),
+                StackRouter.of({
+                    path: "/pages/detail",
+                    modal: true,
+                    routes: [
+                        Route.of({
+                            path: "/pages/detail/pageAirlineDetail",
+                            build: buildExtender({
+                                getPageClass: () => Pages.PageAirlineDetail,
                                 headerBarStyle: { visible: true }
                             })
                         })
@@ -76,5 +109,10 @@ const router = Router.of({
         })
     ]
 });
+
+/*
+router.listen((location) => {
+    console.log(`[ROUTER] location url: ${location.url}`);
+});*/
 
 export default router;

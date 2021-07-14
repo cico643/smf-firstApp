@@ -18,7 +18,6 @@ export type PassengerData = {
     trips: number;
     airline: Airline;
     __v: number;
-
 }
 
 type AllPassengerData = {

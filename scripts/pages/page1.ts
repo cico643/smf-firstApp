@@ -78,7 +78,9 @@ export default class Page1 extends Page1Design {
         if(DataStore.getIsLoggedIn()) {
             try {
                 const token = DataStore.getJwt();
-                this.router.push("/pages/pageHome");
+                setTimeout(() => {
+                    this.router.push("/pages/pageHome");
+                }, 300)
             } catch (err) {
                 console.error(err);
             }
@@ -154,5 +156,7 @@ function onLoad(superOnLoad: () => void) {
     this.initMaterialTextBoxes();
     this.initTextValue();
     this.autoLogin();
+    
+    
 
 }

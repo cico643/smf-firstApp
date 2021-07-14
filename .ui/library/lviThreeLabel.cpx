@@ -24,7 +24,7 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout",
+			"className": ".sf-flexLayout #pageHome-flexLayout1",
 			"id": "a903-6769-3b89-c46b",
 			"props": {
 				"children": [
@@ -54,7 +54,7 @@
 			}
 		},
 		{
-			"className": ".sf-label",
+			"className": ".sf-label #pageHome-lblItem",
 			"id": "ff46-0743-4c7a-d504",
 			"props": {
 				"children": [],
@@ -77,7 +77,7 @@
 			}
 		},
 		{
-			"className": ".sf-label",
+			"className": ".sf-label #pageHome-lblItem",
 			"id": "8b87-965a-f49c-b23c",
 			"props": {
 				"children": [],
@@ -101,7 +101,7 @@
 			}
 		},
 		{
-			"className": ".sf-label",
+			"className": ".sf-label #pageHome-lblItem",
 			"id": "5232-cf6e-e59c-9ec3",
 			"props": {
 				"children": [],

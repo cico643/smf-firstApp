@@ -37,15 +37,19 @@
 		"&-statusBar": {
 			"android": {
 				"color": "rgba( 0, 0, 0, 1 )",
-                "visible": true,
-                "masksToBounds": true
+				"visible": true,
+				"masksToBounds": true
 			}
 		},
 		"&-headerBar": {
 			"backgroundColor": "rgba( 0, 0, 0, 1 )",
-            "titleColor": "rgba( 255, 255, 255, 1 )",
-            "masksToBounds": true,
-            "visible": true
-		}
+			"titleColor": "rgba( 255, 255, 255, 1 )",
+			"masksToBounds": true,
+			"visible": true
+		},
+		"&-label": {
+			"textColor": "rgba( 74, 144, 226, 1 )"
+		},
+		"&-listView": {}
 	}
 }

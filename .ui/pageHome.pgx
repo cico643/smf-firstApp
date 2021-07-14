@@ -46,11 +46,11 @@
 			}
 		},
 		{
-			"className": ".sf-listView",
+			"className": ".sf-listView #pageHome-listView1",
 			"id": "5a98-8ea6-dbe7-b526",
 			"props": {
 				"children": [
-					"39aa-c251-60c6-74d5"
+					"b04b-c56f-071c-005f"
 				],
 				"name": "listView1",
 				"parent": "ecfb-1ecd-7f59-90c4",
@@ -68,16 +68,16 @@
 		{
 			"className": ".sf-listViewItem",
 			"hiddenComponent": false,
-			"id": "39aa-c251-60c6-74d5",
+			"id": "b04b-c56f-071c-005f",
 			"props": {
 				"children": [],
-				"name": "lviThreeLabel",
+				"name": "lviChevron",
 				"parent": "5a98-8ea6-dbe7-b526"
 			},
 			"source": {
 				"page": "__library__",
-				"type": "lviThreeLabel",
-				"id": "6b1c-3b5e-73db-6ca6"
+				"type": "lviChevron",
+				"id": "7fd0-fff9-75a3-0c9b"
 			},
 			"type": "ListViewItem",
 			"userProps": {
@@ -88,9 +88,7 @@
 					"positionType": "RELATIVE"
 				},
 				"left": 0,
-				"paddingBottom": 5,
-				"paddingTop": 5,
-				"testId": "KmItOQSEZ",
+				"testId": "yR9RDsNoY",
 				"top": 0
 			}
 		}

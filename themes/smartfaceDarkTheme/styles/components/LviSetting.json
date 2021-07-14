@@ -1,0 +1,28 @@
+{
+	".lviSetting": {
+		"&-seperator": {
+			"height": 1,
+			"right": 0,
+			"bottom": 0,
+			"left": 15,
+			"flexProps": {
+				"positionType": "ABSOLUTE"
+			},
+			"backgroundColor": "rgba( 155, 155, 155, 1 )"
+		},
+		"&-lblChevron": {
+			"flexProps": {
+				"positionType": "ABSOLUTE"
+			},
+			"height": 50,
+			"width": 100,
+			"textAlignment": "MIDCENTER",
+			"textColor": "rgba( 155, 155, 155, 1 )"
+		},
+		"&-flexLayout1": {
+			"marginBottom": 0,
+			"marginTop": 0,
+			"backgroundColor": "rgba( 255, 255, 255, 0 )"
+		}
+	}
+}

@@ -1,19 +1,26 @@
 import PageSettingDesign from 'generated/pages/pageSetting';
 import LviTwoLabel from "components/LviTwoLabel";
 import LviSwitch from "components/LviSwitch";
+import LviSetting from "components/LviSetting";
 import Menu from "@smartface/native/ui/menu";
 import MenuItem from "@smartface/native/ui/menuitem";
 import Application from '@smartface/native/application';
 import addChild from "@smartface/contx/lib/smartface/action/addChild";
 import * as DataStore from "store/dataStore";
 import { ThemeService } from "theme";
+import router from 'routes';
+import System from '@smartface/native/device/system';
+import Image from '@smartface/native/ui/image';
+import Color from '@smartface/native/ui/color';
+
+
 
 export default class PageSetting extends PageSettingDesign {
     router: any;
     langMenu: Menu;
     dataSet: any;
     appTheme: string;
-    listViewItemIndex = 0;
+    listViewItemIndex = 0;  
 	constructor() {
 		super();
 		// Overrides super.onShow method
@@ -24,41 +31,48 @@ export default class PageSetting extends PageSettingDesign {
     
 
     initListView() {
-
-            this.listView1.onRowType = index => index;
-        
-            this.listView1.onRowCreate = (type) => {
-                let listViewItem = type === 0 ? new LviTwoLabel() : new LviSwitch();
-                this.listView1.dispatch(addChild(`myListViewItem${++this.listViewItemIndex}`, listViewItem));
-                return listViewItem;
-            }   
-        
         
 
             this.listView1.rowHeight = 50;
 
             
-            this.listView1.onRowBind = (listViewItem: LviTwoLabel | LviSwitch, index: number) => {
-            if(index == 0 && listViewItem instanceof LviTwoLabel) {
-                listViewItem.titleText = this.dataSet[index].title;
-                listViewItem.contentText = this.dataSet[index].content;
-                if(!listViewItem.onTouch) {
-                    listViewItem.onTouch = () => {
+            this.listView1.onRowBind = (listViewItem: LviSetting, index: number) => {
+            if(index == 0) {
+                listViewItem.seperator.visible = true;
+                listViewItem.lblChevron.visible = true;
+                listViewItem.flexImageSwitch.visible = false;
+                listViewItem.lblTitle.text = this.dataSet[index].title;
+                if(!listViewItem.lblChevron.onTouch) {
+                    listViewItem.lblChevron.onTouch = () => {
                         this.langMenu.show(this);
                     }
                 }
             }
-            else if(index == 1 && listViewItem instanceof LviSwitch) {
-                listViewItem.titleText = this.dataSet[index].title;
+            else if(index == 1) {
+                listViewItem.seperator.visible = false;
+                listViewItem.lblChevron.visible = false;
+                listViewItem.flexImageSwitch.visible = true;
+                listViewItem.lblTitle.text = this.dataSet[index].title;
                 this.appTheme = DataStore.getTheme();
-                listViewItem.switchTheme.toggle = this.appTheme === "smartfaceDarkTheme";
-
-                listViewItem.switchTheme.onToggleChanged = () => {
-                    this.appTheme = this.appTheme == 'smartfaceDarkTheme' ? 'loginTheme' : 'smartfaceDarkTheme';
+                listViewItem.flexImageSwitch.lblLeftIcon.onTouch = () => {
+                    listViewItem.flexImageSwitch.lblLeftIcon.backgroundColor = Color.WHITE;
+                    listViewItem.flexImageSwitch.lblLeftIcon.textColor = Color.DARKGRAY;
+                    listViewItem.flexImageSwitch.lblRightIcon.backgroundColor = Color.DARKGRAY;
+                    listViewItem.flexImageSwitch.lblRightIcon.textColor = Color.WHITE;
+                    this.appTheme = "smartfaceDarkTheme";
                     ThemeService.changeTheme(this.appTheme);
                     DataStore.setTheme(this.appTheme);
                 }
-            
+
+                listViewItem.flexImageSwitch.lblRightIcon.onTouch = () => {
+                    listViewItem.flexImageSwitch.lblRightIcon.backgroundColor = Color.WHITE;
+                    listViewItem.flexImageSwitch.lblRightIcon.textColor = Color.DARKGRAY;
+                    listViewItem.flexImageSwitch.lblLeftIcon.backgroundColor = Color.DARKGRAY;
+                    listViewItem.flexImageSwitch.lblLeftIcon.textColor = Color.WHITE;
+                    this.appTheme = "loginTheme";
+                    ThemeService.changeTheme(this.appTheme);
+                    DataStore.setTheme(this.appTheme);
+                }
             }
         }        
 
@@ -91,6 +105,7 @@ function onShow(superOnShow: () => void) {
     this.initListView();
     this.refreshListView();
     
+
 }
 
 /**
@@ -100,12 +115,15 @@ function onShow(superOnShow: () => void) {
  */
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
+
+
+
     this.dataSet = [{
         title: global.lang["language"],
         content: DataStore.getLang() || Device.language.toUpperCase()
     },
     {
-        title: global.lang["darkTheme"],
+        title: global.lang["theme"],
     }]
     
     this.appTheme = DataStore.getTheme() || "loginTheme";

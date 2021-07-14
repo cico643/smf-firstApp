@@ -1,3 +1,20 @@
 {
-    
+	"#pageHome": {
+		"&-flexLayout1": {
+			"backgroundColor": "rgba( 245, 166, 35, 1 )"
+		},
+		"&-listView1": {
+			"borderRadius": 20,
+			"marginBottom": 0,
+			"marginTop": 0,
+			"padding": 15,
+			"borderColor": "rgba( 245, 166, 35, 0.74 )"
+		}
+	},
+	"#pageSetting": {
+		"&-flexLayout1": {
+			"marginBottom": 0,
+			"marginTop": 0
+		}
+	}
 }

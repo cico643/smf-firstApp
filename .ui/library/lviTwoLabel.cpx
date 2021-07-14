@@ -29,12 +29,14 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout",
+			"className": ".sf-flexLayout #pageSetting-flexLayout1",
 			"id": "cf54-7689-6d64-a734",
 			"props": {
 				"children": [
 					"3179-9b7f-a45c-c4df",
-					"f167-8961-6354-596b"
+					"f167-8961-6354-596b",
+					"dc8b-48d9-570e-f107",
+					"167b-db15-d4b8-340a"
 				],
 				"name": "flexLayout1",
 				"parent": "b317-479f-0ccc-51c7",
@@ -49,11 +51,13 @@
 				"flexProps": {
 					"flexGrow": 1,
 					"flexDirection": "ROW",
-					"justifyContent": "SPACE_BETWEEN"
+					"justifyContent": "CENTER",
+					"alignItems": "CENTER"
 				},
 				"height": null,
 				"testId": "vtFm9nUnl",
-				"usePageVariable": true
+				"usePageVariable": true,
+				"visible": true
 			}
 		},
 		{
@@ -72,10 +76,11 @@
 			"type": "Label",
 			"userProps": {
 				"flexProps": {
-					"flexGrow": 3
+					"flexGrow": 1
 				},
 				"testId": "z9_eTnBn1",
 				"text": "label1",
+				"textAlignment": "MIDLEFT",
 				"usePageVariable": true
 			}
 		},
@@ -97,10 +102,53 @@
 				"flexProps": {
 					"flexGrow": 1
 				},
+				"height": 47.36842105263158,
 				"testId": "z9_eTnBn1",
 				"text": "label1",
 				"textAlignment": "MIDRIGHT",
+				"usePageVariable": true,
+				"width": 375.4385964912281
+			}
+		},
+		{
+			"className": ".sf-activityIndicator",
+			"id": "dc8b-48d9-570e-f107",
+			"props": {
+				"children": [],
+				"name": "activityIndicator1",
+				"parent": "cf54-7689-6d64-a734",
 				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ActivityIndicator",
+			"userProps": {
+				"flexProps": {
+					"positionType": "ABSOLUTE"
+				},
+				"testId": "-zayhZZRr",
+				"usePageVariable": true,
+				"visible": false
+			}
+		},
+		{
+			"className": ".sf-flexLayout .lviTwoLabel-seperator",
+			"id": "167b-db15-d4b8-340a",
+			"props": {
+				"children": [],
+				"name": "seperator",
+				"parent": "cf54-7689-6d64-a734",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"testId": "maXrNUMws",
+				"usePageVariable": true,
+				"visible": false
 			}
 		}
 	]

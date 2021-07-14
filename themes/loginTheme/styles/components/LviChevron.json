@@ -1,0 +1,19 @@
+{
+	".lviChevron": {
+		"&-flexLayout1": {
+			"marginBottom": 0,
+			"marginTop": 0,
+			"backgroundColor": "rgba( 245, 166, 35, 0.74 )"
+		},
+		"&-seperator": {
+			"backgroundColor": "rgba( 255, 255, 255, 1 )",
+			"height": 1,
+			"flexProps": {
+				"positionType": "ABSOLUTE"
+			},
+			"bottom": 0,
+			"left": 15,
+			"right": 0
+		}
+	}
+}
