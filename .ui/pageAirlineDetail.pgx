@@ -64,7 +64,7 @@
 			}
 		},
 		{
-			"className": ".sf-listView",
+			"className": ".sf-listView #pageAirlineDetail-listView1",
 			"id": "2cf0-6363-725c-f610",
 			"props": {
 				"children": [

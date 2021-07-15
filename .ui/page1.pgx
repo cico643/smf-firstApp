@@ -8,11 +8,11 @@
 				"children": [
 					"42b807d1",
 					"b7d28cff",
-					"418e-d247-37b3-41fb",
 					"fa28-0055-3f2a-42ee",
 					"d374-f3c0-7ceb-b619",
 					"073f-b673-11c0-ac2f",
 					"e41f-4bc0-bca2-77be",
+					"1630-2cf7-5e95-700f",
 					"37b0-56a3-0703-50e7",
 					"91c2-bbce-197a-dd43"
 				],
@@ -67,24 +67,6 @@
 			"userProps": {
 				"title": "Page1",
 				"visible": true
-			}
-		},
-		{
-			"className": ".sf-label #page1-lblSetting",
-			"id": "418e-d247-37b3-41fb",
-			"props": {
-				"children": [],
-				"name": "lblSetting",
-				"parent": "e891b86d",
-				"text": "",
-				"usePageVariable": true
-			},
-			"type": "Label",
-			"userProps": {
-				"marginTop": 1,
-				"testId": "mD2aTqbMT",
-				"text": "",
-				"usePageVariable": true
 			}
 		},
 		{
@@ -181,6 +163,24 @@
 			"userProps": {
 				"testId": "zHGjSobf9",
 				"text": "Forgot password?",
+				"textAlignment": "MIDRIGHT",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #page1-lblSignup",
+			"id": "1630-2cf7-5e95-700f",
+			"props": {
+				"children": [],
+				"name": "lblSignup",
+				"parent": "e891b86d",
+				"text": "label1",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"testId": "i_WtRvHap",
+				"text": "label1",
 				"textAlignment": "MIDRIGHT",
 				"usePageVariable": true
 			}

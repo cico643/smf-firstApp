@@ -1,5 +1,7 @@
 import PageForgotPasswordDesign from 'generated/pages/pageForgotPassword';
 import isEmail from "validator/lib/isEmail";
+import HeaderBarItem from '@smartface/native/ui/headerbaritem';
+import Image from '@smartface/native/ui/image';
 
 export default class PageForgotPassword extends PageForgotPasswordDesign {
     isValidEmail: boolean = false;
@@ -42,4 +44,13 @@ function onShow(superOnShow: () => void) {
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
     this.initMaterialTextBoxes();
+
+    this.headerBar.setLeftItem(
+      new HeaderBarItem({
+        onPress: () => {
+          this.router.goBack();
+        },
+        image: Image.createFromFile('images://arrow_back.png'),
+      }),
+    );
 }

@@ -50,7 +50,7 @@
 			"id": "b382-29ce-4505-cbc8",
 			"props": {
 				"children": [
-					"8b8c-a51e-34cb-a183"
+					"eea0-1c6f-0698-31f6"
 				],
 				"name": "listView1",
 				"parent": "7992-a487-00b3-dfce",
@@ -61,6 +61,7 @@
 				"flexProps": {
 					"flexGrow": 0
 				},
+				"height": 140,
 				"testId": "q-atxCSU5",
 				"usePageVariable": true
 			}
@@ -68,7 +69,7 @@
 		{
 			"className": ".sf-listViewItem",
 			"hiddenComponent": false,
-			"id": "8b8c-a51e-34cb-a183",
+			"id": "eea0-1c6f-0698-31f6",
 			"props": {
 				"children": [],
 				"name": "lviSetting",

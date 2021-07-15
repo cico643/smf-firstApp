@@ -40,6 +40,12 @@
 				"flexGrow": 0
 			},
 			"textAlignment": "MIDCENTER"
+		},
+		"&-lblSignup": {
+			"textColor": "rgba( 0, 0, 0, 1 )",
+			"font": {
+				"size": 12
+			}
 		}
 	}
 }

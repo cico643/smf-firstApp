@@ -49,7 +49,7 @@ SMF.i18n.defineLanguage('tr', {
     "signUp": "Kayıt ol",
     "email": "E-posta",
     "sendMail": "Mail Gönder",
-    "theme": "Tema",
+    "theme": "Tema Seç",
     "language": "Dil",
     "selectLanguage": "Dili seçiniz",
     "createAccount": "Yeni hesap oluştur",
@@ -61,5 +61,7 @@ SMF.i18n.defineLanguage('tr', {
     "mailValidationError": "Geçerli bir mail adresi girilmeli",
     "name": "İsim",
     "country": "Ülke",
-    "established": "Kuruluş yılı"
+    "established": "Kuruluş yılı",
+    "minValidError": "En az 6 karakter girilmeli",
+    "invalidCredentials": "Kayıt başarısız, bilgileri güncelleyin"
 });

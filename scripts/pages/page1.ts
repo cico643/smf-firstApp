@@ -25,15 +25,15 @@ export default class Page1 extends Page1Design {
 		// Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 
-
+        this.lblSignup.text = global.lang["signUp"];
         setupButtonActivity(this.btnLogin, this.loginActivityIndicator , this.onLoginButtonPress);
 
         this.lblForgotPassword.onTouch = () => {
             this.router.push("/pages/pageForgotPassword");
         }
 
-        this.lblSetting.onTouch = () => {
-            this.router.push("/pages/settings/pageSetting");
+        this.lblSignup.onTouch = () => {
+            this.router.push("/pages/auth/pageRegister");
         }
 
     }
@@ -101,7 +101,7 @@ export default class Page1 extends Page1Design {
             onActionButtonPress: () => this.mtbPassword.materialTextBox.requestFocus(),
             onTextChanged: () => {
                 this.credentialStatus = this.mtbUsername.materialTextBox.text.length >= 6;
-                this.mtbUsername.materialTextBox.errorMessage = this.mtbUsername.materialTextBox.text.length >= 6 ? "" : this.mtbUsername.materialTextBox.text.length + "/6";
+                this.mtbUsername.materialTextBox.errorMessage =  this.mtbUsername.materialTextBox.text.length >= 6 ? "" : this.mtbUsername.materialTextBox.text.length + "/6";
             }
         };
         this.mtbPassword.options = {
@@ -145,14 +145,7 @@ function onLoad(superOnLoad: () => void) {
     };
 
     this.headerBar.backgroundColor = Color.create("#F5A623");
-    this.signUpItem = new HeaderBarItem({
-        title: global.lang["signUp"],
-        onPress: () => {
-            this.router.push("/pages/auth/pageRegister");
-        }
-    });
 
-    this.headerBar.setItems([this.signUpItem]);
     this.initMaterialTextBoxes();
     this.initTextValue();
     this.autoLogin();

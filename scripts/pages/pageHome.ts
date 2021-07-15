@@ -3,6 +3,9 @@ import { getPassenger, PassengerData } from "services/passenger";
 import LviThreeLabel from "components/LviThreeLabel";
 import LviTwoLabel from "components/LviTwoLabel";
 import LviChevron from "components/LviChevron";
+import HeaderBarItem from "@smartface/native/ui/headerbaritem";
+import Image from '@smartface/native/ui/image';
+
 
 
 export default class PageHome extends PageHomeDesign {
@@ -86,4 +89,22 @@ function onShow(superOnShow: () => void) {
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
     this.initListView();
+
+    this.headerBar.setLeftItem(
+      new HeaderBarItem({
+        onPress: () => {
+          this.router.goBack();
+        },
+        image: Image.createFromFile('images://arrow_back.png'),
+      }),
+    );
+
+    this.headerBar.setItems([
+        new HeaderBarItem({
+        image: Image.createFromFile("images://settings.png"),
+        onPress: () => {
+            this.router.push("/pages/settings/pageSetting");
+        },
+        }),
+    ]);
 }

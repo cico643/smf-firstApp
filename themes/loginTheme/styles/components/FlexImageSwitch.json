@@ -1,0 +1,10 @@
+{
+	".flexImageSwitch": {
+		"&-flexLayout1": {
+			"borderRadius": 13,
+			"marginBottom": 0,
+			"marginTop": 0,
+			"backgroundColor": "rgba( 155, 155, 155, 0.18 )"
+		}
+	}
+}

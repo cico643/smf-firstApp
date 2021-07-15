@@ -29,7 +29,7 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout #pageSetting-flexLayout1",
+			"className": ".sf-flexLayout .lviTwoLabel-wrapper",
 			"id": "cf54-7689-6d64-a734",
 			"props": {
 				"children": [
@@ -61,7 +61,7 @@
 			}
 		},
 		{
-			"className": ".sf-label",
+			"className": ".sf-label .lviTwoLabel-label",
 			"id": "3179-9b7f-a45c-c4df",
 			"props": {
 				"children": [],
@@ -85,7 +85,7 @@
 			}
 		},
 		{
-			"className": ".sf-label",
+			"className": ".sf-label .lviTwoLabel-label",
 			"id": "f167-8961-6354-596b",
 			"props": {
 				"children": [],

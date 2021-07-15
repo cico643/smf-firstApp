@@ -16,5 +16,9 @@
 			"marginBottom": 0,
 			"marginTop": 0
 		}
+	},
+	".listViewAirline": {
+		"paddingRight": 10,
+		"paddingLeft": 15
 	}
 }

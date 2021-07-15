@@ -11,9 +11,6 @@ export default class PageRegister extends PageRegisterDesign {
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
         
 
-        this.lblCancel.onTouch = () => {
-            this.router.dismiss();
-        }
 
         this.btnRegister.onPress = this.onRegisterButtonPress;
     }
@@ -35,7 +32,7 @@ export default class PageRegister extends PageRegisterDesign {
             this.router.dismiss();
         } catch (err) {
             this.btnRegister.text = global.lang["signUp"];
-            alert()
+            alert(global.lang["invalidCredentials"]);
         }
         
     }
@@ -83,6 +80,7 @@ function onShow(superOnShow: () => void) {
  */
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
+    this.headerBar.title = global.lang["signUp"];
     this.initMaterialTextBoxes();
     this.initTextValue();
 }

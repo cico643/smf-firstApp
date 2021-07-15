@@ -20,13 +20,14 @@ export default class PageSetting extends PageSettingDesign {
     langMenu: Menu;
     dataSet: any;
     appTheme: string;
-    listViewItemIndex = 0;  
-	constructor() {
+
+    constructor() {
 		super();
 		// Overrides super.onShow method
 		this.onShow = onShow.bind(this, this.onShow.bind(this));
 		// Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+        
     }
     
 
@@ -49,29 +50,32 @@ export default class PageSetting extends PageSettingDesign {
                 }
             }
             else if(index == 1) {
+                this.listView1.rowHeight = 70;
                 listViewItem.seperator.visible = false;
                 listViewItem.lblChevron.visible = false;
                 listViewItem.flexImageSwitch.visible = true;
                 listViewItem.lblTitle.text = this.dataSet[index].title;
                 this.appTheme = DataStore.getTheme();
                 listViewItem.flexImageSwitch.lblLeftIcon.onTouch = () => {
-                    listViewItem.flexImageSwitch.lblLeftIcon.backgroundColor = Color.WHITE;
-                    listViewItem.flexImageSwitch.lblLeftIcon.textColor = Color.DARKGRAY;
-                    listViewItem.flexImageSwitch.lblRightIcon.backgroundColor = Color.DARKGRAY;
-                    listViewItem.flexImageSwitch.lblRightIcon.textColor = Color.WHITE;
-                    this.appTheme = "smartfaceDarkTheme";
-                    ThemeService.changeTheme(this.appTheme);
-                    DataStore.setTheme(this.appTheme);
+                        this.appTheme = "smartfaceDarkTheme";
+                        ThemeService.changeTheme(this.appTheme);
+                        DataStore.setTheme(this.appTheme);
+                        listViewItem.flexImageSwitch.lblLeftIcon.backgroundColor = Color.create(239,239,239);
+                        listViewItem.flexImageSwitch.lblLeftIcon.textColor = Color.create(55,55,55);
+                        listViewItem.flexImageSwitch.lblRightIcon.backgroundColor = Color.create(55,55,55);
+                        listViewItem.flexImageSwitch.lblRightIcon.textColor = Color.create(239,239,239);
+                    
                 }
 
                 listViewItem.flexImageSwitch.lblRightIcon.onTouch = () => {
-                    listViewItem.flexImageSwitch.lblRightIcon.backgroundColor = Color.WHITE;
-                    listViewItem.flexImageSwitch.lblRightIcon.textColor = Color.DARKGRAY;
-                    listViewItem.flexImageSwitch.lblLeftIcon.backgroundColor = Color.DARKGRAY;
-                    listViewItem.flexImageSwitch.lblLeftIcon.textColor = Color.WHITE;
-                    this.appTheme = "loginTheme";
-                    ThemeService.changeTheme(this.appTheme);
-                    DataStore.setTheme(this.appTheme);
+                        this.appTheme = "loginTheme";
+                        ThemeService.changeTheme(this.appTheme);
+                        DataStore.setTheme(this.appTheme);
+                        listViewItem.flexImageSwitch.lblRightIcon.backgroundColor = Color.create(239,239,239);
+                        listViewItem.flexImageSwitch.lblRightIcon.textColor = Color.create(55,55,55);
+                        listViewItem.flexImageSwitch.lblLeftIcon.backgroundColor = Color.create(55,55,55);
+                        listViewItem.flexImageSwitch.lblLeftIcon.textColor = Color.create(239,239,239);
+                    
                 }
             }
         }        
@@ -115,9 +119,6 @@ function onShow(superOnShow: () => void) {
  */
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
-
-
-
     this.dataSet = [{
         title: global.lang["language"],
         content: DataStore.getLang() || Device.language.toUpperCase()

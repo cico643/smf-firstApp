@@ -36,6 +36,12 @@
 			"backgroundColor": "#FFFFFF",
 			"textColor": "#000000",
 			"borderRadius": 20
+		},
+		"&-lblSignup": {
+			"textColor": "rgba(255,255,255,1)",
+			"font": {
+				"size": 12
+			}
 		}
 	}
 }

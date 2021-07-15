@@ -63,5 +63,7 @@ SMF.i18n.defineLanguage('en', {
     "mailValidationError": "You must enter a valid email",
     "name": "Name",
     "country": "Country",
-    "established": "Established"
+    "established": "Established",
+    "minValidError": "Must enter at least 6 character",
+    "invalidCredentials": "Invalid Credentials" 
 });

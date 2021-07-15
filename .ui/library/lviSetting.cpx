@@ -16,9 +16,9 @@
 			"type": "ListViewItem",
 			"userProps": {
 				"flexProps": {},
-				"left": 21.05263157894737,
+				"left": 10.526315789473685,
 				"testId": "-BToAkDpK",
-				"top": 89.47368421052633
+				"top": 315.7894736842106
 			}
 		},
 		{
@@ -26,11 +26,10 @@
 			"id": "cabf-1794-196d-a8c9",
 			"props": {
 				"children": [
-					"806a-f993-5e96-7cc6",
 					"4ea4-bc52-23f2-678b",
-					"ade0-9714-a761-63d5",
 					"f0ab-5f06-5c70-c18d",
-					"e60c-56e8-72c6-ed3e"
+					"e60c-56e8-72c6-ed3e",
+					"439c-696a-2817-3f39"
 				],
 				"name": "flexLayout1",
 				"parent": "7bf2-3e67-7da7-8502",
@@ -53,31 +52,7 @@
 			}
 		},
 		{
-			"className": ".sf-label",
-			"id": "806a-f993-5e96-7cc6",
-			"props": {
-				"children": [],
-				"name": "lblIcon",
-				"parent": "cabf-1794-196d-a8c9",
-				"text": "label1",
-				"usePageVariable": true
-			},
-			"source": {
-				"page": "__library__"
-			},
-			"type": "Label",
-			"userProps": {
-				"flexProps": {
-					"flexGrow": 1
-				},
-				"testId": "XtTixKkTK",
-				"text": "label1",
-				"textAlignment": "MIDCENTER",
-				"usePageVariable": true
-			}
-		},
-		{
-			"className": ".sf-label",
+			"className": ".sf-label .lviSetting-label",
 			"id": "4ea4-bc52-23f2-678b",
 			"props": {
 				"children": [],
@@ -94,44 +69,10 @@
 				"flexProps": {
 					"flexGrow": 3
 				},
+				"height": 50,
 				"testId": "XtTixKkTK",
 				"text": "label1",
 				"usePageVariable": true
-			}
-		},
-		{
-			"className": ".sf-flexLayout",
-			"hiddenComponent": false,
-			"id": "ade0-9714-a761-63d5",
-			"props": {
-				"children": [],
-				"name": "flexImageSwitch",
-				"parent": "cabf-1794-196d-a8c9",
-				"usePageVariable": true
-			},
-			"source": {
-				"page": "__library__",
-				"type": "flexImageSwitch",
-				"id": "9838-2b46-853b-27d3"
-			},
-			"type": "FlexLayout",
-			"userProps": {
-				"flex": {
-					"flexDirection": 2,
-					"positionType": 0
-				},
-				"flexProps": {
-					"flexDirection": "ROW",
-					"positionType": "ABSOLUTE",
-					"justifyContent": "FLEX_START",
-					"flexGrow": 0,
-					"alignSelf": "AUTO"
-				},
-				"height": 63.15789473684211,
-				"testId": "LQesASezr",
-				"usePageVariable": true,
-				"visible": false,
-				"width": 164.9122807017544
 			}
 		},
 		{
@@ -175,11 +116,50 @@
 					"family": "FontAwesome5FreeSolid",
 					"style": null
 				},
+				"right": 21,
 				"testId": "_0KxbejW2",
 				"text": "",
 				"textAlignment": "MIDRIGHT",
 				"usePageVariable": true,
 				"visible": false
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"hiddenComponent": false,
+			"id": "439c-696a-2817-3f39",
+			"props": {
+				"children": [],
+				"name": "flexImageSwitch",
+				"parent": "cabf-1794-196d-a8c9",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flexImageSwitch",
+				"id": "9838-2b46-853b-27d3"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"flexDirection": 2,
+					"justifyContent": 0,
+					"positionType": 0
+				},
+				"flexProps": {
+					"flexDirection": "ROW",
+					"justifyContent": "FLEX_START",
+					"positionType": "ABSOLUTE",
+					"alignItems": "STRETCH",
+					"alignContent": "STRETCH"
+				},
+				"height": 35,
+				"right": 0,
+				"testId": "LQesASezr",
+				"top": 8,
+				"usePageVariable": true,
+				"visible": false,
+				"width": 100
 			}
 		}
 	]

@@ -38,11 +38,11 @@
 				"isRemovable": false,
 				"name": "headerBar",
 				"parent": "ecfb-1ecd-7f59-90c4",
-				"title": "pageHome"
+				"title": "Passengers"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "pageHome"
+				"title": "Passengers"
 			}
 		},
 		{

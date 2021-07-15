@@ -9,6 +9,12 @@
 			"flexProps": {
 				"positionType": "ABSOLUTE"
 			}
+		},
+		"&-wrapper": {
+			"paddingLeft": 15,
+			"paddingRight": 15,
+			"marginBottom": 0,
+			"marginTop": 0
 		}
 	}
 }

@@ -1,26 +1,25 @@
 {
 	".flexImageSwitch": {
-		"&-flexLayout1": {},
-		"&-lblIcon": {
-			"backgroundColor": "rgba(255,255,255,1)",
-			"textColor": "rgba( 0, 0, 0, 1 )"
+		"&-leftWrapper": {
+			"backgroundColor": "rgba( 41, 41, 41, 1 )",
+			"borderRadius": 50
 		},
-		"&-lblLeftIcon": {
-			"backgroundColor": "rgba(255,255,255,1)",
-			"textColor": "rgba( 74, 74, 74, 1 )",
+		"&-leftIcon": {
+			"textColor": "rgba( 55, 55, 55, 1 )",
+			"backgroundColor": "rgba( 239, 239, 239, 1 )"
+		},
+		"&-rightWrapper": {
+			"backgroundColor": "rgba( 55, 55, 55, 1 )"
+		},
+		"&-rightIcon": {
+			"textColor": "rgba( 239, 239, 239, 1 )",
+			"backgroundColor": "rgba( 55, 55, 55, 1 )"
+		},
+		"&-flexLayout1": {
 			"marginBottom": 0,
-			"marginTop": 0
-		},
-		"&-lblRightIcon": {
-			"backgroundColor": "rgba( 74, 74, 74, 1 )",
-			"textColor": "rgba(255,255,255,1)",
-			"marginBottom": 0,
-			"marginTop": 0
-		},
-		"&-wrapper": {
-			"borderColor": "rgba(255,255,255,1)",
+			"marginTop": 0,
 			"borderRadius": 13,
-			"borderWidth": 1
+			"borderColor": "rgba(255,255,255,1)"
 		}
 	}
 }

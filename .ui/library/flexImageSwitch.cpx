@@ -20,11 +20,11 @@
 					"justifyContent": "FLEX_START",
 					"positionType": "RELATIVE"
 				},
-				"height": 63,
-				"left": 128.0701754385965,
+				"height": 73,
+				"left": 68.42105263157896,
 				"testId": "LQesASezr",
-				"top": 35.08771929824562,
-				"width": 130
+				"top": 56.140350877192986,
+				"width": 133
 			}
 		},
 		{
@@ -32,11 +32,12 @@
 			"id": "a41f-e386-ce33-fd5b",
 			"props": {
 				"children": [
-					"e89a-9d5e-f559-3092",
-					"202c-099d-b2b6-146b"
+					"c8d0-056e-1546-7a2a",
+					"a4e8-985d-3f5d-9084"
 				],
-				"name": "flexLayout1",
-				"parent": "9838-2b46-853b-27d3"
+				"name": "flexWrap1",
+				"parent": "9838-2b46-853b-27d3",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
@@ -46,15 +47,17 @@
 				"flexProps": {
 					"flexGrow": 1,
 					"flexDirection": "ROW",
-					"alignItems": "STRETCH"
+					"alignItems": "STRETCH",
+					"justifyContent": "FLEX_START"
 				},
 				"height": null,
-				"testId": "nlcLEjqoK"
+				"testId": "nlcLEjqoK",
+				"usePageVariable": true
 			}
 		},
 		{
-			"className": ".sf-label .flexImageSwitch-lblLeftIcon",
-			"id": "e89a-9d5e-f559-3092",
+			"className": ".sf-label .flexImageSwitch-leftIcon",
+			"id": "c8d0-056e-1546-7a2a",
 			"props": {
 				"children": [],
 				"name": "lblLeftIcon",
@@ -71,22 +74,22 @@
 					"flexGrow": 1
 				},
 				"font": {
-					"size": 26,
+					"size": 17,
 					"bold": false,
 					"italic": false,
 					"family": "FontAwesome5FreeSolid",
 					"style": null
 				},
 				"height": null,
-				"testId": "SUYqNCH48",
+				"testId": "qV6dA1OOm",
 				"text": "",
 				"textAlignment": "MIDCENTER",
 				"usePageVariable": true
 			}
 		},
 		{
-			"className": ".sf-label .flexImageSwitch-lblRightIcon",
-			"id": "202c-099d-b2b6-146b",
+			"className": ".sf-label .flexImageSwitch-rightIcon",
+			"id": "a4e8-985d-3f5d-9084",
 			"props": {
 				"children": [],
 				"name": "lblRightIcon",
@@ -103,14 +106,14 @@
 					"flexGrow": 1
 				},
 				"font": {
-					"size": 26,
+					"size": 17,
 					"bold": false,
 					"italic": false,
 					"family": "FontAwesome5FreeRegular",
 					"style": null
 				},
 				"height": null,
-				"testId": "SUYqNCH48",
+				"testId": "qV6dA1OOm",
 				"text": "",
 				"textAlignment": "MIDCENTER",
 				"usePageVariable": true
