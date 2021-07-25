@@ -88,9 +88,6 @@
 				<action android:name="biz.smartface3.smartface_demo.run" />
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
-		</activity>
-        <activity android:name = ".A"
-                    android:label="${ApplicationName}" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -99,7 +96,7 @@
                     android:host="www.smfpassenger1.com"
                     android:pathPrefix="/airlines" />
             </intent-filter>
-        </activity>
+		</activity>
 		<service android:name="com.geniem.sprat.billing.BillingService" />
 		<receiver android:name="com.geniem.sprat.billing.BillingReceiver">
 			<intent-filter>
