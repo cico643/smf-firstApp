@@ -7,7 +7,7 @@ import LviTwoLabel from "components/LviTwoLabel";
 type DataSet = {
     name: string;
     country: string;
-    established: number;
+    established: string;
 }
 
 export default class PageAirlineDetail extends PageAirlineDetailDesign {
@@ -38,7 +38,7 @@ export default class PageAirlineDetail extends PageAirlineDetailDesign {
         }
         else if(index == 2) {
             listViewItem.lblTitle.text = global.lang["established"];
-            listViewItem.lblContent.text = this.dataSet.established.toString();
+            listViewItem.lblContent.text = this.dataSet.established;
         }
 
 

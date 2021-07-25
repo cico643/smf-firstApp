@@ -6,5 +6,13 @@ export default class LviChevron extends LviChevronDesign {
 		// Initalizes super class for this scope
 		super(props);
 		this.pageName = pageName;
-	}
+    }
+    
+    set airlineName(value: string) {
+        this.lblLeft.text = value;
+    }
+
+    set trips(value: string) {
+        this.lblCenter.text = value;
+    }
 }

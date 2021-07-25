@@ -8,7 +8,7 @@ export type Airline = {
     slogan: string;
     head_quaters: string;
     website: string;
-    established: number;
+    established: string;
 
 }
 

@@ -19,4 +19,12 @@ import router from "routes";
 // Set uncaught exception handler, all exceptions that are not caught will
 // trigger onUnhandledError callback.
 
+
+Application.onApplicationCallReceived = e => {
+    if (System.OS === System.OSType.ANDROID && e.data) {
+      /* Your code goes here */
+      console.info(e.data);
+    }
+}
+
 router.push("/pages/page1");

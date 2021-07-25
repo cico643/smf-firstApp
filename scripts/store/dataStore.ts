@@ -35,3 +35,11 @@ export function getTheme(): string {
 export function setTheme(value: string): void {
     return Data.setStringVariable("appTheme", value);
 }
+
+export function getIsItemMarked(index: string): boolean {
+    return Data.getBooleanVariable(`${index} isMarked`);
+}
+
+export function setIsItemMarked(index: string, value: boolean): void {
+    Data.setBooleanVariable(`${index} isMarked`, value);
+}
