@@ -93,7 +93,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="smartface-emulator"
-                    android:host="airlines"
+                    android:host="pageAirlineDetail"
+                    android:path="/0" />
             </intent-filter>
 		</activity>
 		<service android:name="com.geniem.sprat.billing.BillingService" />
