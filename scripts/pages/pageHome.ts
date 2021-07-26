@@ -58,7 +58,10 @@ export default class PageHome extends PageHomeDesign {
                 let currentMarkedStatus = DataStore.getIsItemMarked(e.index.toString()) || false;
                 markItem.text = currentMarkedStatus ? "UNMARK" : "MARK";
                 markItem.font = Font.create("Arial-ItalicMT", 10, Font.BOLD_ITALIC);
-                markItem.backgroundColor = Color.create(204, 204, 0);
+                let itemStyle = getCombinedStyle(".lviChevron-flexLayout1");
+                markItem.backgroundColor = (
+                    currentMarkedStatus ? itemStyle.backgroundColor : Color.create(204, 204, 0)
+                );
                 markItem.textColor = Color.WHITE;
                 markItem.ios.padding = 40;
                 markItem.ios.isAutoHide = false;
@@ -90,13 +93,17 @@ export default class PageHome extends PageHomeDesign {
                 listViewItem.seperator.visible = false;
                 const itemStyle = getCombinedStyle(".lviChevron-flexLayout1");
                 let isMarked = DataStore.getIsItemMarked(index.toString()) || false;
-                listViewItem.flexLayout1.backgroundColor = isMarked ? Color.create(204, 204, 0) : itemStyle.backgroundColor;
+                listViewItem.flexLayout1.backgroundColor = (
+                    isMarked ? Color.create(204, 204, 0) : itemStyle.backgroundColor
+                );
             }
             
             else {                
                 const itemStyle = getCombinedStyle(".lviChevron-flexLayout1");
                 let isMarked = DataStore.getIsItemMarked(index.toString()) || false;
-                listViewItem.flexLayout1.backgroundColor = isMarked ? Color.create(204, 204, 0) : itemStyle.backgroundColor;
+                listViewItem.flexLayout1.backgroundColor = (
+                    isMarked ? Color.create(204, 204, 0) : itemStyle.backgroundColor
+                );
                 listViewItem.activityIndicator1.visible = false;
                 listViewItem.seperator.visible = true;
                 listViewItem.airlineName = this.dataSet[index].name;

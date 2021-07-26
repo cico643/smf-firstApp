@@ -18,7 +18,7 @@ import Color from '@smartface/native/ui/color';
 export default class PageSetting extends PageSettingDesign {
     router: any;
     langMenu: Menu;
-    dataSet: any;
+    dataSet: {title: string, content?: string}[];
     appTheme: string;
 
     constructor() {

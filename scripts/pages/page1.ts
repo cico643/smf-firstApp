@@ -43,17 +43,27 @@ export default class Page1 extends Page1Design {
         try {
 
                if(this.mtbUsername.materialTextBox.text.length < 6 ) {
-                   this.mtbUsername.materialTextBox.errorMessage = this.mtbUsername.materialTextBox.text.length + "/6";
+                   this.mtbUsername.materialTextBox.errorMessage = (
+                       this.mtbUsername.materialTextBox.text.length + "/6"
+                    );
+
                    this.credentialStatus = false;
                }
                if(this.mtbPassword.materialTextBox.text.length < 6 ) {
-                   this.mtbPassword.materialTextBox.errorMessage = this.mtbPassword.materialTextBox.text.length + "/6";
+                   this.mtbPassword.materialTextBox.errorMessage = (
+                       this.mtbPassword.materialTextBox.text.length + "/6"
+                    );
+                    
                    this.credentialStatus = false;
                }
 
                if(this.credentialStatus) {
                   showIndicator();
-                  const response = await userService.login(this.mtbUsername.materialTextBox.text, this.mtbPassword.materialTextBox.text);
+                  const response = await userService.login(
+                    this.mtbUsername.materialTextBox.text, 
+                    this.mtbPassword.materialTextBox.text
+                );
+
                   // await new Promise(r => setTimeout(r, 2000));
 
                   DataStore.setJwt(JSON.stringify(response));

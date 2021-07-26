@@ -21,9 +21,11 @@ import router from "routes";
 
 
 Application.onApplicationCallReceived = e => {
-    if (System.OS === System.OSType.ANDROID && e.data) {
+    // @ts-ignore
+    if (System.OS === System.OSType.ANDROID && e.url) {
       /* Your code goes here */
-      console.info(e.data);
+      console.info(e);
+      
     }
 }
 

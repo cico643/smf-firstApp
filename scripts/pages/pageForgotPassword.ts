@@ -20,7 +20,9 @@ export default class PageForgotPassword extends PageForgotPasswordDesign {
             hint: global.lang["email"],
             onTextChanged: () => {
                 this.isValidEmail = isEmail(this.mtbEmail.materialTextBox.text);
-                this.mtbEmail.materialTextBox.errorMessage = this.isValidEmail ? "" : global.lang["mailValidationError"];
+                this.mtbEmail.materialTextBox.errorMessage = (
+                    this.isValidEmail ? "" : global.lang["mailValidationError"]
+                );
             }
         }
     }
