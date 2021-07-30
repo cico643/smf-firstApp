@@ -2,6 +2,7 @@ import PageForgotPasswordDesign from 'generated/pages/pageForgotPassword';
 import isEmail from "validator/lib/isEmail";
 import HeaderBarItem from '@smartface/native/ui/headerbaritem';
 import Image from '@smartface/native/ui/image';
+import "@smartface/extension-utils/lib/router/goBack";
 
 export default class PageForgotPassword extends PageForgotPasswordDesign {
     isValidEmail: boolean = false;

@@ -22,6 +22,8 @@
 				},
 				"height": 73,
 				"left": 68.42105263157896,
+				"marginBottom": 0,
+				"marginTop": 0,
 				"testId": "LQesASezr",
 				"top": 56.140350877192986,
 				"width": 133
@@ -32,8 +34,8 @@
 			"id": "a41f-e386-ce33-fd5b",
 			"props": {
 				"children": [
-					"c8d0-056e-1546-7a2a",
-					"a4e8-985d-3f5d-9084"
+					"470f-38da-54bc-c1e8",
+					"360c-a9ca-5de4-9aa1"
 				],
 				"name": "flexWrap1",
 				"parent": "9838-2b46-853b-27d3",
@@ -56,12 +58,38 @@
 			}
 		},
 		{
+			"className": ".sf-flexLayout .flexImageSwitch-leftWrapper",
+			"id": "470f-38da-54bc-c1e8",
+			"props": {
+				"children": [
+					"d158-0425-663f-3073"
+				],
+				"name": "flexLeftWrapper",
+				"parent": "a41f-e386-ce33-fd5b",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"height": null,
+				"marginBottom": 0,
+				"marginTop": 0,
+				"testId": "HfWGYPe1_",
+				"usePageVariable": true
+			}
+		},
+		{
 			"className": ".sf-label .flexImageSwitch-leftIcon",
-			"id": "c8d0-056e-1546-7a2a",
+			"id": "d158-0425-663f-3073",
 			"props": {
 				"children": [],
 				"name": "lblLeftIcon",
-				"parent": "a41f-e386-ce33-fd5b",
+				"parent": "470f-38da-54bc-c1e8",
 				"text": "",
 				"usePageVariable": true
 			},
@@ -74,26 +102,53 @@
 					"flexGrow": 1
 				},
 				"font": {
-					"size": 17,
+					"size": 16,
 					"bold": false,
 					"italic": false,
 					"family": "FontAwesome5FreeSolid",
 					"style": null
 				},
 				"height": null,
-				"testId": "qV6dA1OOm",
+				"marginBottom": 0,
+				"marginTop": 0,
+				"testId": "YmmDZQHJ0",
 				"text": "",
 				"textAlignment": "MIDCENTER",
 				"usePageVariable": true
 			}
 		},
 		{
+			"className": ".sf-flexLayout .flexImageSwitch-rightWrapper",
+			"id": "360c-a9ca-5de4-9aa1",
+			"props": {
+				"children": [
+					"5127-d8f6-1e63-a02f"
+				],
+				"name": "flexRightWrapper",
+				"parent": "a41f-e386-ce33-fd5b",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"height": null,
+				"marginTop": 0,
+				"testId": "HfWGYPe1_",
+				"usePageVariable": true
+			}
+		},
+		{
 			"className": ".sf-label .flexImageSwitch-rightIcon",
-			"id": "a4e8-985d-3f5d-9084",
+			"id": "5127-d8f6-1e63-a02f",
 			"props": {
 				"children": [],
 				"name": "lblRightIcon",
-				"parent": "a41f-e386-ce33-fd5b",
+				"parent": "360c-a9ca-5de4-9aa1",
 				"text": "",
 				"usePageVariable": true
 			},
@@ -106,14 +161,14 @@
 					"flexGrow": 1
 				},
 				"font": {
-					"size": 17,
+					"size": 16,
 					"bold": false,
 					"italic": false,
 					"family": "FontAwesome5FreeRegular",
 					"style": null
 				},
-				"height": null,
-				"testId": "qV6dA1OOm",
+				"marginTop": 0,
+				"testId": "oLOGW9qyu",
 				"text": "",
 				"textAlignment": "MIDCENTER",
 				"usePageVariable": true

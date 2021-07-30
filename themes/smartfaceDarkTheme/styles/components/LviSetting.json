@@ -8,7 +8,7 @@
 			"flexProps": {
 				"positionType": "ABSOLUTE"
 			},
-			"backgroundColor": "rgba( 155, 155, 155, 1 )"
+			"backgroundColor": "rgba( 70, 70, 70, 1 )"
 		},
 		"&-lblChevron": {
 			"flexProps": {
@@ -23,7 +23,10 @@
 			"textColor": "rgba( 239, 239, 239, 1 )"
 		},
 		"&-flexLayout1": {
-			"paddingLeft": 30
+			"paddingLeft": 15
+		},
+		"&-flexImageSwitch": {
+			"paddingRight": 15
 		}
 	}
 }

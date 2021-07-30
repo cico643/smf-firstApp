@@ -4,8 +4,19 @@
 			"textColor": "rgba( 0, 0, 0, 1 )",
 			"backgroundColor": "rgba( 255, 255, 255, 1 )"
 		},
-        "&-lblItem": {
-            "textColor": "rgba(0 ,0 ,0 ,1)"
-        }
+		"&-lblItem": {
+			"textColor": "rgba(0 ,0 ,0 ,1)"
+		},
+		"paddingBottom": 0,
+		"paddingLeft": 0,
+		"paddingRight": 0,
+		"paddingTop": 0,
+		"&-listView1": {
+			"padding": 15,
+			"borderRadius": null,
+			"borderWidth": null,
+			"backgroundColor": "rgba( 0, 0, 0, 1 )",
+			"borderColor": "rgba( 55, 55, 55, 1 )"
+		}
 	}
 }

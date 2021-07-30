@@ -16,7 +16,7 @@ export type PassengerData = {
     _id: string;
     name: string;
     trips: number;
-    airline: Airline;
+    airline: Airline[] | Airline;
     __v: number;
 }
 
@@ -26,9 +26,23 @@ type AllPassengerData = {
     data: PassengerData[];
 }
 
-export async function getPassenger(page: number): Promise<AllPassengerData> {
+export async function getPassengerForLazyLoad(page: number): Promise<AllPassengerData> {
     try {
         const response: AllPassengerData = await scPassenger.request(`/v1/passenger?page=${page}&size=10`, {
+            method: "GET"
+        });
+
+        return response;
+
+    } catch (err) {
+        console.error(err);
+        throw err;
+    }
+}
+
+export async function getPassenger(page: number): Promise<AllPassengerData> {
+    try {
+        const response: AllPassengerData = await scPassenger.request(`/v1/passenger?page=${page}&size=1`, {
             method: "GET"
         });
 

@@ -42,9 +42,7 @@
 		"&-headerBar": {
 			"backgroundColor": "rgba( 245, 166, 35, 1 )"
 		},
-		"&-flexLayout": {
-			"backgroundColor": "rgba( 255, 255, 255, 1 )"
-		},
+		"&-flexLayout": {},
 		"&-label": {
 			"textColor": "rgba( 0, 0, 0, 1 )"
 		},
@@ -52,7 +50,7 @@
 			"flexProps": {
 				"alignContent": "STRETCH",
 				"alignItems": "STRETCH",
-				"alignSelf": "CENTER"
+				"alignSelf": "STRETCH"
 			},
 			"width": 310
 		}

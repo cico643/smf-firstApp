@@ -1,5 +1,6 @@
 import PageRegisterDesign from 'generated/pages/pageRegister';
 import * as UserService from "../services/user";
+import HeaderBarItem = require('@smartface/native/ui/headerbaritem');
 export default class PageRegister extends PageRegisterDesign {
     router: any;
     credentialStatus: boolean = false;

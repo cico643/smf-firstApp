@@ -9,6 +9,7 @@ import HeaderBarItem from '@smartface/native/ui/headerbaritem';
 import Color from '@smartface/native/ui/color';
 import * as DataStore from "store/dataStore";
 import { ThemeService } from 'theme';
+import Image from '@smartface/native/ui/image';
 
 
 
@@ -70,6 +71,8 @@ export default class Page1 extends Page1Design {
                   DataStore.setIsLoggedIn(true);
                 
                   hideIndicator();
+                  this.mtbPassword.materialTextBox.removeFocus();
+                  this.mtbUsername.materialTextBox.removeFocus();
                   this.router.push("/pages/pageHome");
                }
             

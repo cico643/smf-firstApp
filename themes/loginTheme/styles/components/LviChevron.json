@@ -3,7 +3,7 @@
 		"&-flexLayout1": {
 			"marginBottom": 0,
 			"marginTop": 0,
-			"backgroundColor": "rgba( 245, 166, 35, 0.74 )"
+			"backgroundColor": "rgba( 239, 239, 239, 1 )"
 		},
 		"&-seperator": {
 			"backgroundColor": "rgba( 255, 255, 255, 1 )",

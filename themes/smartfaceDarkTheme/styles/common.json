@@ -22,7 +22,6 @@
 			"marginTop": 0
 		},
 		"&-listView1": {
-			"height": 115,
 			"borderRadius": 15,
 			"backgroundColor": "rgba( 55, 55, 55, 1 )"
 		}
@@ -37,6 +36,16 @@
 	"#pageAirlineDetail": {
 		"&-listView1": {
 			"backgroundColor": "rgba( 55, 55, 55, 1 )"
+		}
+	},
+	".flexIconSmall": {
+		"&-wrapper": {
+			"paddingLeft": 8,
+			"paddingBottom": 8,
+			"paddingRight": 8,
+			"paddingTop": 8,
+			"borderRadius": 50,
+			"backgroundColor": "rgba( 41, 41, 41, 1 )"
 		}
 	}
 }

@@ -26,6 +26,7 @@
 			"id": "cabf-1794-196d-a8c9",
 			"props": {
 				"children": [
+					"7718-9311-4c50-807b",
 					"4ea4-bc52-23f2-678b",
 					"f0ab-5f06-5c70-c18d",
 					"e60c-56e8-72c6-ed3e",
@@ -49,6 +50,45 @@
 				"height": null,
 				"testId": "OCXGUofBU",
 				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"hiddenComponent": false,
+			"id": "7718-9311-4c50-807b",
+			"props": {
+				"children": [],
+				"name": "iconSmall",
+				"parent": "cabf-1794-196d-a8c9",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "iconSmall",
+				"id": "d6d0-6253-5635-fd12"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0,
+					"flexDirection": 2,
+					"justifyContent": 0,
+					"alignItems": 4
+				},
+				"flexProps": {
+					"positionType": "RELATIVE",
+					"flexDirection": "ROW",
+					"justifyContent": "FLEX_START",
+					"alignItems": "STRETCH"
+				},
+				"height": 40,
+				"left": 0,
+				"marginRight": 10,
+				"testId": "1Y1MDpAkd",
+				"top": 0,
+				"usePageVariable": true,
+				"visible": false,
+				"width": 40
 			}
 		},
 		{
@@ -125,7 +165,7 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout",
+			"className": ".sf-flexLayout .lviSetting-flexImageSwitch",
 			"hiddenComponent": false,
 			"id": "439c-696a-2817-3f39",
 			"props": {
@@ -153,7 +193,7 @@
 					"alignItems": "STRETCH",
 					"alignContent": "STRETCH"
 				},
-				"height": 35,
+				"height": 40,
 				"right": 0,
 				"testId": "LQesASezr",
 				"top": 8,

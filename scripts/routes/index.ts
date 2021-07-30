@@ -10,7 +10,9 @@ import System from "@smartface/native/device/system";
 import backClose from "@smartface/extension-utils/lib/router/back-close";
 import Image from "@smartface/native/ui/image";
 import Color from "@smartface/native/ui/color";
-
+import Application from "@smartface/native/application";
+import * as DataStore from "store/dataStore";
+import { getPassenger } from "services/passenger";
 
 //backClose.setDefaultBackStyle({image: Image.createFromFile("images://arrow_back.png"), hideTitle: true});
 
@@ -109,6 +111,38 @@ const router = Router.of({
         })
     ]
 });
+
+Application.onApplicationCallReceived = async (e) => {
+    // @ts-ignore
+    if (System.OS === System.OSType.ANDROID && e.url) {
+      /* Your code goes here */
+
+      // @ts-ignore
+      let parsedUrl = e.url.split("/");
+
+      // @ts-ignore
+      let passengerId = parsedUrl[parsedUrl.length];
+      if(DataStore.getIsLoggedIn()) {
+        const response = await getPassenger(passengerId + 1);
+        const data = Array.isArray(response.data[0].airline) ? response.data[0].airline[0] : response.data[0].airline;
+        router.push("/pages/detail/pageAirlineDetail", { data });
+      }
+      else {
+          const interval = setInterval( async () => {
+            if(DataStore.getIsLoggedIn()) {
+                const response = await getPassenger(passengerId + 1);
+                const data = Array.isArray(response.data[0].airline) ? response.data[0].airline[0] : response.data[0].airline;
+                router.push("/pages/detail/pageAirlineDetail", { data });
+                clearInterval(interval);
+            }
+          }, 150);
+      }
+
+      
+    }
+}
+
+
 
 /*
 router.listen((location) => {

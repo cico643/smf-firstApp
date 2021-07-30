@@ -1,25 +1,25 @@
 {
 	".flexImageSwitch": {
 		"&-leftWrapper": {
-			"backgroundColor": "rgba( 41, 41, 41, 1 )",
-			"borderRadius": 50
-		},
-		"&-leftIcon": {
-			"textColor": "rgba( 55, 55, 55, 1 )",
 			"backgroundColor": "rgba( 239, 239, 239, 1 )"
 		},
+		"&-leftIcon": {
+			"textColor": "rgba( 55, 55, 55, 1 )"
+		},
 		"&-rightWrapper": {
-			"backgroundColor": "rgba( 55, 55, 55, 1 )"
+			"backgroundColor": "rgba( 55, 55, 55, 1 )",
+			"borderRadius": 13
 		},
 		"&-rightIcon": {
 			"textColor": "rgba( 239, 239, 239, 1 )",
-			"backgroundColor": "rgba( 55, 55, 55, 1 )"
+			"height": null
 		},
 		"&-flexLayout1": {
 			"marginBottom": 0,
 			"marginTop": 0,
-			"borderRadius": 13,
-			"borderColor": "rgba(255,255,255,1)"
+			"borderColor": "rgba(255,255,255,1)",
+			"borderRadius": 8,
+			"borderWidth": 1
 		}
 	}
 }

@@ -1,7 +1,7 @@
 {
 	"components": [
 		{
-			"className": ".sf-page",
+			"className": ".sf-page #pageHome",
 			"id": "ecfb-1ecd-7f59-90c4",
 			"initialized": true,
 			"props": {
@@ -11,11 +11,13 @@
 					"5a98-8ea6-dbe7-b526"
 				],
 				"name": "pageHome",
-				"orientation": "PORTRAIT",
+				"orientation": "AUTO",
 				"parent": null
 			},
 			"type": "Page",
-			"userProps": {},
+			"userProps": {
+				"orientation": "AUTO"
+			},
 			"version": "0.0.1.a"
 		},
 		{

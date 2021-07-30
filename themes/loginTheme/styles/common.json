@@ -15,10 +15,20 @@
 		"&-flexLayout1": {
 			"marginBottom": 0,
 			"marginTop": 0
+		},
+		"&-listView1": {
+			"backgroundColor": "rgba( 155, 155, 155, 0.18 )",
+			"borderRadius": 15,
+			"height": 100,
+			"marginBottom": 0,
+			"marginTop": 0
 		}
 	},
 	".listViewAirline": {
 		"paddingRight": 10,
 		"paddingLeft": 15
+	},
+	".listViewHome": {
+		"&-lviChevron": {}
 	}
 }

@@ -1,8 +1,6 @@
 import PageHomeDesign from 'generated/pages/pageHome';
-import { getPassenger, PassengerData } from "services/passenger";
-import LviThreeLabel from "components/LviThreeLabel";
-import LviTwoLabel from "components/LviTwoLabel";
-import LviChevron from "components/LviChevron";
+import { getPassengerForLazyLoad, PassengerData } from "services/passenger";
+import LviChevron, { passengerListViewData } from "components/LviChevron";
 import HeaderBarItem from "@smartface/native/ui/headerbaritem";
 import Image from '@smartface/native/ui/image';
 import ListView from "@smartface/native/ui/listview";
@@ -10,10 +8,13 @@ import Color from '@smartface/native/ui/color';
 import Font from '@smartface/native/ui/font';
 import { getCombinedStyle } from '@smartface/extension-utils/lib/getCombinedStyle';
 import * as DataStore from "store/dataStore";
+import View from '@smartface/native/ui/view';
+import System from '@smartface/native/device/system';
 
 export default class PageHome extends PageHomeDesign {
     router: any;
-    private dataSet: PassengerData[] = [];
+    private dataSet: passengerListViewData[] = [];
+    
     isLoading: boolean = false;
     index: number = 0;
     pagination: number = 0;
@@ -24,6 +25,20 @@ export default class PageHome extends PageHomeDesign {
 		this.onShow = onShow.bind(this, this.onShow.bind(this));
 		// Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+        this.orientation = PageHomeDesign.Orientation.AUTO;
+        this.onOrientationChange = ({ orientation }) => {
+            if(orientation === PageHomeDesign.Orientation.PORTRAIT || orientation === PageHomeDesign.Orientation.UPSIDEDOWN) {
+                this.listView1.paddingLeft = 90;
+                
+            }
+            else if(orientation === PageHomeDesign.Orientation.LANDSCAPELEFT || orientation === PageHomeDesign.Orientation.LANDSCAPERIGHT) {
+                this.listView1.paddingLeft = 15;
+            }
+            
+            if(System.OS === System.OSType.ANDROID) {
+                return;
+            }
+        }  
 
     }
     
@@ -46,6 +61,7 @@ export default class PageHome extends PageHomeDesign {
                 this.applyDimension(e.index, deleteItem);
                 deleteItem.onPress = (e) => {
                     this.deleteAndRefresh(e);
+                    this.refreshListView();
                 };
                 return [deleteItem];
             }
@@ -85,13 +101,25 @@ export default class PageHome extends PageHomeDesign {
                     return 1;
                 }
             }
-            
-        this.listView1.rowHeight = 50;
         this.listView1.onRowBind = async (listViewItem: LviChevron, index: number) => {
+
+            let itemStyle = getCombinedStyle(".lviChevron-flexLayout1");
+            listViewItem.flexLayout1.backgroundColor = itemStyle.backgroundColor;
+            listViewItem.seperator.backgroundColor = Color.WHITE;
+            if(index === 0) {
+                listViewItem.flexLayout1.borderWidth = 1;
+                listViewItem.flexLayout1.borderRadius = 20;
+                listViewItem.flexLayout1.borderColor = itemStyle.backgroundColor;
+                listViewItem.flexLayout1.maskedBorders = [View.Border.TOP_LEFT, View.Border.TOP_RIGHT];                
+            }
+            else {
+                listViewItem.flexLayout1.borderWidth = 0;
+                listViewItem.flexLayout1.borderRadius = 0;
+            }
+
             if(index === this.dataSet.length) {
                 listViewItem.activityIndicator1.visible = true;
                 listViewItem.seperator.visible = false;
-                const itemStyle = getCombinedStyle(".lviChevron-flexLayout1");
                 let isMarked = DataStore.getIsItemMarked(index.toString()) || false;
                 listViewItem.flexLayout1.backgroundColor = (
                     isMarked ? Color.create(204, 204, 0) : itemStyle.backgroundColor
@@ -99,7 +127,6 @@ export default class PageHome extends PageHomeDesign {
             }
             
             else {                
-                const itemStyle = getCombinedStyle(".lviChevron-flexLayout1");
                 let isMarked = DataStore.getIsItemMarked(index.toString()) || false;
                 listViewItem.flexLayout1.backgroundColor = (
                     isMarked ? Color.create(204, 204, 0) : itemStyle.backgroundColor
@@ -108,20 +135,37 @@ export default class PageHome extends PageHomeDesign {
                 listViewItem.seperator.visible = true;
                 listViewItem.airlineName = this.dataSet[index].name;
                 listViewItem.trips = this.dataSet[index].trips.toString();
+                this.listView1.rowHeight = this.dataSet[index].height;
                 listViewItem.lblChevron.onTouchEnded = () => {
-                    this.router.push("/pages/detail/pageAirlineDetail", { data: this.dataSet[index].airline });
+                    this.router.push("/pages/detail/pageAirlineDetail", { data: this.dataSet[index].airline[0] });
                 };
             }              
 
             if(index > this.dataSet.length - 2 && !this.isLoading) {
+                this.isLoading = true;
                 await this.pushPassengersToDataSet();
                 this.listView1.itemCount = this.dataSet.length + 1;
                 this.listView1.refreshData();
                 this.isLoading = false;
             }
+
+            if(this.dataSet[index]) {
+                listViewItem.iconSmall.imgIcon.loadFromUrl(this.dataSet[index].airline[0].logo);
+                listViewItem.iconSmall.visible = true;
+            }
+            else {
+                listViewItem.iconSmall.visible = false;
+                listViewItem.iconSmall.imgIcon = null;
+            }
         }
+
+
     }
 
+    refreshListView = () => {
+        this.listView1.itemCount = this.dataSet.length;
+        this.listView1.refreshData();
+    }
 
     applyDimension = (index: number, item: ListView.SwipeItem) => {
             if (index == 0) {
@@ -157,7 +201,7 @@ export default class PageHome extends PageHomeDesign {
         });
 
         this.listView1.refreshRowRange({
-            itemCount:1,
+            itemCount: 1,
             positionStart: this.dataSet.length - 1
         });
 
@@ -165,12 +209,13 @@ export default class PageHome extends PageHomeDesign {
 
     pushPassengersToDataSet = async () => {
         this.isLoading = true;
-        let response = await getPassenger(this.pagination);
+        let response = await getPassengerForLazyLoad(this.pagination);
         this.pagination += 1;
 
         for(let i = 0; i < 10; i++) {
             let passenger = response.data[i];
-            this.dataSet.push(passenger);
+            let passengerForListView = LviChevron.processPassengerData(passenger);
+            this.dataSet.push(passengerForListView);
         }
     }
 
@@ -183,7 +228,8 @@ export default class PageHome extends PageHomeDesign {
  * @param {Object} parameters passed from Router.go function
  */
 function onShow(superOnShow: () => void) {
-	superOnShow();
+    superOnShow();
+    this.refreshListView();
 }
 
 /**
